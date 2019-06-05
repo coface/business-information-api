@@ -1,4 +1,4 @@
-# Coface business-information-api code samples
+# Coface Business Information API code samples
 
 ... Under development ...
 
