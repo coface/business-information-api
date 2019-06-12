@@ -3,7 +3,7 @@
 import requests
 import json
 
-order_id = 123456
+order_id = "603f5ea2-b869-46c3-a85e-ed2677c1e4ed"
 comment = "any comment"
 headers = {"Accept": "application/json", "Content-Type": "application/json", "api_key": "8842ace2-e377-48d9-b129-f952950ea535"}
 data = json.dumps({"comment": comment})

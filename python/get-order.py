@@ -3,7 +3,7 @@
 import requests
 import json
 
-order_id = 12345678
+order_id = "603f5ea2-b869-46c3-a85e-ed2677c1e4ed"
 headers = {"Accept": "application/json", "api_key": "8842ace2-e377-48d9-b129-f952950ea535"}
 response = requests.get("https://test.cofacecentraleurope.com/api/bi/v1/order/{0}".format(order_id), headers=headers)
 if (response.status_code == 200):

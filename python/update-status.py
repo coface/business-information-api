@@ -3,7 +3,7 @@
 import requests
 import json
 
-order_id = 12345678
+order_id = "603f5ea2-b869-46c3-a85e-ed2677c1e4ed"
 headers = {"Accept": "application/json", "api_key": "8842ace2-e377-48d9-b129-f952950ea535", "Content-Type": "application/json"}
 data = json.dumps({"action": "cancel", "cancel_reason": "order placed by mistake"})
 response = requests.put("https://test.cofacecentraleurope.com/api/bi/v1/order/{0}/status".format(order_id), headers=headers, data=data)
