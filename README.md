@@ -8,7 +8,7 @@ For a detailed description of the REST API, visit https://b2b.cofacecentraleurop
 
 In this repository, you can find sample code to help you get started with using the API to integrate Coface's business information services into your own systems.
 
-Sample code is available in [python](python) and in [C#](C#).
+Sample code is available in [python](python) and in [C#](C%23).
 
 
 
