@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Lists the documents (e.g. reports) associated with an order.
+
+# more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/getOrderDocumentList
+
 import requests
 import json
 

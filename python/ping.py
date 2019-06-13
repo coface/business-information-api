@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Returns the server status - you can use it as a health check to ensure that the REST endpoint is active.
+
+# more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/ping
+
 import requests
 import json
 

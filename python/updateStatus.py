@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Request an update to the status of a previously submitted order.
+
+# more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/updateStatus
+
 import requests
 import json
 

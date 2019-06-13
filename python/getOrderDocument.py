@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Retrieve a document (e.g. a report) associated with an order.
+
+# more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/getOrderDocument
+
 import requests
 import json
 

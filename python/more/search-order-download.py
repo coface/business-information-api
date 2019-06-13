@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# In this example we search for a company, place an order for a report, wait for the report to be ready and then download it
+
 import requests
 import json
 import time
@@ -72,14 +74,11 @@ def place_order_immediate(product, company_id, format):
         raise ValueError("server returned http status %d (%s)" % (response.status_code, response.text))
 
 
-def section(title):
-    print("")
-    print("")
-    print("===== " + title + " =====")
-    print("")
+def print_title(title):
+    print("\n\n===== " + title + " =====\n")
 
 
-section("Company search")
+print_title("Company search")
 
 companies = search_for_company("country_iso_code=PL&company_name=Hydrobudowa&limit=5")
 print("Company search result list:")
@@ -89,8 +88,7 @@ company_id = companies[0]['company_id']
 print("")
 print("Found {0} companies with name Hydrobudowa in PL; first one has company_id {1}".format(len(companies), company_id))
 
-
-section("Placing an order")
+print_title("Placing an order")
 
 immediate_order_response = place_order_immediate(200, company_id, 'html')
 immediate_order_guid = immediate_order_response['id']
@@ -98,19 +96,18 @@ print("")
 print("Immediate order placed; order ID is " + immediate_order_guid)
 
 
-section("Waiting for the order to finish")
+print_title("Waiting for the order to finish")
 
 finished = False
 while not finished:
     print("Order not finished yet, waiting...")
-    time.sleep(1)
+    time.sleep(5)
     order_details = get_order_details(immediate_order_guid)
     finished = (order_details['order_status'] == 'finished' or order_details['order_status'] == 'cancelled')
 
 print("Immediate order finished")
 
-
-section("Retrieving report document")
+print_title("Retrieving report document")
 
 documents = list_order_documents(immediate_order_guid)
 print("")
@@ -120,6 +117,6 @@ for document in documents:
 
 report = get_order_document(immediate_order_guid, documents[0]['file_name'])
 print("")
-print("Downloaded report has a length of {0} characters, showing first 500:".format(len(report)))
-print(report[:500])
+print("Downloaded report has a length of {0} characters".format(len(report)))
+print(report)
 print("...")

@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
 
+# Monitor a company to receive notifications when updated company data becomes available.
+
+# You will need to specify at least:
+# * the company to monitor (company_id)
+# * the monitoring product to order (product_details).
+#    * product_code: 9002 for the standard CCE Risk monitor (values from code table CC8800).
+#    * language: the language of notification (e.g en for english).
+#    * format: xml, pdf, html or txt.
+# * if you're using the demo API key, you cannot place a new monitoring order (you can check for notitifcations though)
+
+# more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/placeMonitoringOrder
+
 import requests
 import json
 
