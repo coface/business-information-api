@@ -1,6 +1,11 @@
 using System;
 using System.Net.Http;
 
+// Retrieves the list of possible code names (i.e. legal forms, activities etc.)
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/getCodetables
+
+
 namespace ConsoleProgram
 {
     public class Class1

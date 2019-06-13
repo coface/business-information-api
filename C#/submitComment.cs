@@ -1,6 +1,11 @@
 using System;
 using System.Net.Http;
 
+// Submit a comment to an order.
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc//operation/submitComment
+
+
 namespace ConsoleProgram
 {
     public class Class1

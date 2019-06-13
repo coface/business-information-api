@@ -1,11 +1,16 @@
 using System;
 using System.Net.Http;
 
+// Retrieves a monitoring notification.
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/getNotificationDocument
+
+
 namespace ConsoleProgram
 {
     public class Class1
     {
-        private const string url = "https://test.cofacecentraleurope.com/api/bi/v1/notifications";
+        private const string url = "https://test.cofacecentraleurope.com/api/bi/v1/notification/55";
 
         static void Main(string[] args)
         {

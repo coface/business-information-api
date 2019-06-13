@@ -1,6 +1,11 @@
 using System;
 using System.Net.Http;
 
+// Lists the documents (e.g. reports) associated with an order.
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/getOrderDocumentList
+
+
 namespace ConsoleProgram
 {
     public class Class1

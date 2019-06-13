@@ -1,6 +1,11 @@
 using System;
 using System.Net.Http;
 
+// Lists the available identifiers for the country (some company identifiers are country-specific).
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/getIdentifiers
+
+
 namespace ConsoleProgram
 {
     public class Class1

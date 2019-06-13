@@ -1,6 +1,11 @@
 using System;
 using System.Net.Http;
 
+// Find an order in your order history.
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/getOrders
+
+
 namespace ConsoleProgram
 {
     public class Class1

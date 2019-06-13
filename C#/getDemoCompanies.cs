@@ -1,6 +1,11 @@
 using System;
 using System.Net.Http;
 
+// Lists the available demo companies (can be ordered without cost using the demo api-key)
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/getDemoCompanies
+
+
 namespace ConsoleProgram
 {
     public class Class1

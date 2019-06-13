@@ -1,6 +1,11 @@
 using System;
 using System.Net.Http;
 
+// List the countries in which you can order reports on companies.
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/getCountries
+
+
 namespace ConsoleProgram
 {
     public class Class1

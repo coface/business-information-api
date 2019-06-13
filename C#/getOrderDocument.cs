@@ -1,6 +1,11 @@
 using System;
 using System.Net.Http;
 
+// Retrieve a document (e.g. a report) associated with an order.
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc#operation/getOrderDocument
+
+
 namespace ConsoleProgram
 {
     public class Class1

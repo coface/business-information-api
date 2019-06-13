@@ -1,6 +1,11 @@
 using System;
 using System.Net.Http;
 
+// Request an update to the status of a previously submitted order.
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc//operation/updateStatus
+
+
 namespace ConsoleProgram
 {
     public class Class1

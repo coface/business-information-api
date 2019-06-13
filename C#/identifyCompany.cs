@@ -1,6 +1,15 @@
 using System;
 using System.Net.Http;
 
+// Find a company using a unique identifier (returns exactly 1 or 0 results).
+
+// Tips for finding a company:
+// * If you are searching using national identifiers, provide the country (via the country_iso_code)
+// * You don't need to include the legal form in the name (e.g. if the company is called PRINT Solutions Ltd, just search for PRINT Solutions).
+
+// more details at https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc//operation/identifyCompany
+
+
 namespace ConsoleProgram
 {
     public class Class1
