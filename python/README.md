@@ -13,7 +13,7 @@ Point your browser at https://repl.it/languages
 Select Python
 ![](images/image2.png)
 
-Paste the sample code in
+Paste the sample code in (in this example, we're pasting the contents of getDemoCompanies.py)
 ![](images/image3.png)
 
 Click run
