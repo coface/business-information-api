@@ -1,17 +1,12 @@
-# Coface ICON Business Information API code samples
+# Coface ICON Business Information API code
 
-The ICON Business Information REST API allows you to programmatically place orders for credit reports, retrieve reports, monitor companies etc.
+Coface has been a worldwide leader in the credit insurance market for more than 70 years. Our ambition is to facilitate business-to-business trade by working with customers to develop their domestic and export operations, fully assessing the financial risks they take and protecting their trade receivables against non-payment.
+ 
+ICON is the Coface Business Information offer.
 
-For more general information, please visit https://icon.cofacecentraleurope.com
+With a set of data, ICON allows you to manage your risk on a company, a sector or a country.
 
-For a detailed description of the REST API, visit https://b2b.cofacecentraleurope.com/web/online/api-docs/bi/doc
+For more general information, please visit  [our website](https://icon.cofacecentraleurope.com)
 
-In this repository, you can find sample code to help you get started with using the API to integrate Coface's business information services into your own systems.
-
-Sample code is available in [python](python) and in [C#](C%23).
-
-
-
-
-
-
+ICON provides you one API :
+- [Report API](https://github.com/coface/business-information-api/blob/master/report-api/README.md) : to get structured data (business report, credit opinion, ...)
