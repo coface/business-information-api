@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Icon Data API</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+		<style>
+			.bg-icon {
+				background-color: #14375c;
+			}
+			h1, h2 {
+				color: #14375c;
+			}
+			.sticky-bar a {
+				color: white;
+			}
+			.sticky-bar a:hover {
+				background-color: #386ea8;
+			}
+			.sidebar-section {
+			  position: absolute;
+			  height: 100%;
+			  width: 100%;
+			}
+
+			.sidebar-item {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.sticky-bar {
+			  position: -webkit-sticky;
+				position: sticky;
+				top: 0;
+				padding: 0 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-2 bg-icon">
+					<div class="row">
+						<img src="https://raw.githubusercontent.com/coface/business-information-api/master/icon-logo.png" alt="Icon by Coface" class="img-fluid" style="max-height:100px" />
+					</div>
+				</div>
+				<div class="col-7 text-center"><h1 id="introduction">ICON Data API</h1></div>
+			</div>
+			<div class="row">
+				<div class="col-2 bg-icon">
+					<div class="sidebar-item">
+						<div class="sticky-bar">
+							<a href="#introduction" class="nav-link align-middle"><span>Introduction</span></a>
+							<a href="#product" class="nav-link align-middle"><span>Products</span></a>
+							<a href="#process" class="nav-link align-middle"><span>Process</span></a>
+							<a href="#useCase" class="nav-link align-middle"><span>Use cases</span></a>
+							<a href="#glossary" class="nav-link align-middle"><span>Glossary</span></a>
+							<a href="#environment" class="nav-link align-middle"><span>Environment</span></a>
+							<a href="#version" class="nav-link align-middle"><span>Version</span></a>
+							<a href="#security" class="nav-link align-middle"><span>Security</span></a>
+							<a href="#documentation" class="nav-link align-middle"><span>Documentation</span></a>
+							<a href="#faq" class="nav-link align-middle"><span class="pl-4">FAQ</span></a>
+							<a href="#swagger" class="nav-link align-middle"><span class="pl-4">Swagger</span></a>
+							<a href="#postman" class="nav-link align-middle"><span class="pl-4">Postman</span></a>
+							<a href="#principle" class="nav-link align-middle"><span class="pl-4">General principles</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="content-section">
+						<p>Data APIs is a service offered by ICON, Coface Business Information offer. It allows you to request datas about a company, a country or a sector to help you to assess and manage your risks on large portfolios.</p>
+						
+						<div id="product" class="mt-5">
+							<h2>Products</h2>
+							<hr>
+							<p>This API allows you to order and monitor :</p>
+							<ul>
+								<li>Credit Opinion (simple or advanced)</li>
+								<li>Debtor risk assessment (with or without history and probability of default)</li>
+								<li>Company financial data</li>
+								<li>Country risk assessment</li>
+								<li>Sector risk assessment</li>
+							</ul>
+							<p>The description of each product can be found <a href="https://information.coface.com/en-gb/api-solutions">here</a>.</p>
+						</div>
+						<div id="process" class="mt-5">
+							<h2>Process</h2>
+							<hr>
+							<p>You can either order a data or monitor it. Click below to this the different process.</p>
+							<ul><li>Order process</li></ul>
+							<img src="https://raw.githubusercontent.com/coface/business-information-api/master/data-api/documentation/process/orderRequestProcess.png" alt="Order process" class="img-fluid" style="min-width:1100px" />
+
+							<ul><li>Monitor process</li></ul>
+							<img src="https://raw.githubusercontent.com/coface/business-information-api/master/data-api/documentation/process/monitorRequestProcess.png" alt="Monitor process" class="img-fluid" style="min-width:1100px" />
+						</div>
+						<div id="useCase" class="mt-5">
+							<h2>Use cases</h2>
+							<hr>
+							<h4>I want to know the country risk of trading with Argentina</h4>
+							<ul>
+								<li>Check if the Country Risk Assessment (CRA) is available for this country by calling GET /assessments</li>
+								<li>If yes, order the data via POST /publications/orders</li>
+								<li>Retrieve the publication by searching it with the deliveryId provided in the previous step</li>
+							</ul>
+							<h4>I want to know the risk of trading with automobile sector in Germany</h4>
+							<ul>
+								<li>Check if the Sector Risk Assessmentv(SRA) is available for this country by calling GET /assessments</li>
+								<li>If yes, order the data via POST /publications/orders</li>
+								<li>Retrieve the publication by searching it with the deliveryId provided in the previous step</li>
+							</ul>
+							<h4>I want to know the risk of trading with a company</h4>
+							<ul>
+								<li>Check if the Debtor Risk Assessment (DRA) is available for this country by calling GET /assessments</li>
+								<li>If yes, search the company through GET /company
+									<ul>
+										<li>If you find the company, copy its identifier</li>
+										<li>If you don't find it, ask for an identification thank to POST /companies/identifications, copy the response id</li>
+									</ul>
+								</li>
+								<li>Order the data via POST /publications/orders</li>
+								<li>Retrieve the publication by searching it with the deliveryId provided in the previous step</li>
+							</ul>
+							<h4>I want to know the Coface credit opinion on a company</h4>
+							<ul>
+								<li>Check if the Credit Opinion (CO) is available for this country by calling GET /assessments</li>
+								<li>If yes, search the company through GET /company
+									<ul>
+										<li>If you find the company, copy its identifier</li>
+										<li>If you don't find it, ask for an identification thank to POST /companies/identifications, copy the response id</li>
+									</ul>
+								</li>
+								<li>Order the data via POST /publications/orders</li>
+								<li>Retrieve the publication by searching it with the deliveryId provided in the previous step</li>
+							</ul>
+						</div>
+						<div id="glossary" class="mt-5">
+							<h2>Glossary</h2>
+							<hr>
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Term</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr><td>Assessment</td><td>Evaluation made by Coface or an information provider</td></tr>
+									<tr><td>Delivery</td><td>Provision of a publication</td></tr>
+									<tr><td>Monitoring</td><td>Follow up of a data</td></tr>
+									<tr><td>Notification</td><td>Indication of a change on a data</td></tr>
+									<tr><td>Publication</td><td>Data published by Coface or an other provider</td></tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="environment" class="mt-5">
+							<h2>Environment</h2>
+							<hr>
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Environment</th>
+										<th>Endpoint</th>
+										<th>Purpose</th>
+										<th>Limitation</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Production</td>
+										<td>https://icon.coface.com/data-api/v1</td>
+										<td>Get fresh data</td>
+										<td>Each order are billed.</td>
+									</tr>
+									<tr>
+										<td>Sandbox</td>
+										<td>https://icon.sandbox.coface.com/data-api/v1</td>
+										<td>Test your code free of charge</td>
+										<td>The data are old. Only immediate order can be done. Our provider desn't push modification in this environment sonotifications can not be tested.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="version" class="mt-5">
+							<h2>Version</h2>
+							<hr>
+							<p>We keep on doing our best to minimize impacts on our customers but we will sometimes need to modify our interface contract in order to enhance our features.</p>
+							<p>Such modifications will bring the need of a new version. Each version will be classified as a minor or a major one.</p>
+							<p>When released, a minor version has no impact on the consumer. Some bugs have been fixed and some evolutions have been given. It will sometimes bring a modification of the interface contract but being an upgrade i.e. new fields and/or endpoints, the consumer is free to decide whether he wants to add the potential new features or not.</p>
+							<p>However, a major version will impact the consumer in any case: both in the url (where the version stands) and in its code. New developments will be needed to be able to benefit from the modifications.</p>
+							<p>Coface will maintain at most two versions of the API.</p>
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Version</th>
+										<th>Release date</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1.0.0</td>
+										<td>04/04/2022</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="security" class="mt-5">
+							<h2>Security</h2>
+							<hr>
+							<p>Security is a priority for Coface. Security Audit with penetration tests have been performed for 2020 leading to a green light.</p>
+							<p>Coface uses Oauth2 as authentication mechanism; every call must include a JWT token as well as an API key:</p>
+							<ul>
+								<li>Your JWT token can be generated thanks to the credentials that have been provided to you for accessing your private account. It is issued by a secured identity provider (AWS Cognito).</li>
+								<li>Your API key can be found directly in your private account.</li>
+							</ul>
+							<p>Please note that your API key is unique to each user-application pair. It contains your privileges so be sure to keep it secret ! Do not share it publicly in such areas as GitHub, client-side code, and so forth.</p>
+							<p>All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.</p>
+							<br>
+							<p>To use this API, you need an account, please <a href="https://information.coface.com/en-gb/signup">contact us</a>. We will be happy to help you to start to use our api.</p>
+						</div>
+						<div id="documentation" class="mt-5">
+							<h2>Documentation</h2>
+							<hr>
+							<div id="faq" class="mt-4">
+								<h4>FAQ</h4>
+								<p>A question ? Check our <a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/data-api/documentation/faq.html">FAQ</a>.</p>
+							</div>
+							<div id="swagger" class="mt-4">
+								<h4>Swagger</h4>
+								<p>Our swagger is available <a href="https://b2b.cofacecentraleurope.com/web/online/api-docs/index.html?url=https://b2b.cofacecentraleurope.com/api/on/v1/swagger.yaml">here</a>.</p>
+							</div>
+							<div id="postman" class="mt-4">
+								<h4>Postman collection</h4>
+								<p>We provide you <a href="https://github.com/coface/business-information-api/tree/master/data-api/postman">several postman collections and environment settings</a>.</p>
+							</div>
+							<div id="principle" class="mt-4">
+								<h4>General principles</h4>
+								<h5>Language</h5>
+								<p>For content which is language-specific, the language can be selected in the <a href="https://information.coface.com/en-gb/my-account/my-profile">user's profile</a>.</p>
+								<p>Alternatively the "Accept-Language" header may be used to specify a language, which will then override the language selected in the user's profile.</p>
+								<h5>Pagination</h5>
+								<p>To avoid performance issue, we have limited all our searches to a max number of elements.<br>This limitation is specified in the response header "Accept-Range".<br>Accept-Range : ${ressource} ${max)</p>
+								<p>The range query parameter allow you to request specifics items. It's composed like this {offset} - {nb of item to retrieve}.<br>For example, to get the ten first item, range = 0 - 10. For the 5 next items 10 - 5.<br>Be aware that there is a maximal limitation for the number of item to retrieve. If it's 20 for example, 0 - 50 will return only 20 items.<br>The number of items that matched the criteria must be found in the response header "Content-Range".<br>Content-Range : ${offset}–${limit}/${count}</p>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
