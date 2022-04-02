@@ -9,5 +9,5 @@ With a set of data, ICON allows you to manage your risk on a company, a sector o
 For more general information, please visit  [our website](https://icon.cofacecentraleurope.com)
 
 ICON provides you two API :
-- [Report API](https://github.com/coface/business-information-api/blob/master/report-api) : to get structured data (business report, credit opinion, ...)
+- [Report API](https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/documentation.html) : to get structured data (business report, credit opinion, ...)
 - [Data API](https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/data-api/documentation/documentation.html) : to get raw data (score, company financial, ...)
