@@ -4,6 +4,7 @@
         <title>Icon Report API</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="https://raw.githubusercontent.com/coface/business-information-api/master/icon-logo.png">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
@@ -45,26 +46,31 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-2 bg-icon">
+				<div class="col-3 bg-icon">
 					<div class="row">
 						<img src="https://raw.githubusercontent.com/coface/business-information-api/master/icon-logo.png" alt="Icon by Coface" class="img-fluid" style="max-height:100px" />
 					</div>
 				</div>
-				<div class="col-7 text-center"><h1 id="introduction">ICON Report API</h1></div>
+				<div class="col-9 text-center"><h1 id="introduction">ICON Report API</h1></div>
 			</div>
 			<div class="row">
-				<div class="col-2 bg-icon">
+				<div class="col-3 bg-icon">
 					<div class="sidebar-item">
 						<div class="sticky-bar">
 							<a href="#introduction" class="nav-link align-middle"><span>Introduction</span></a>
 							<a href="#product" class="nav-link align-middle"><span>Products</span></a>
+							<a href="#access" class="nav-link align-middle"><span>Access</span></a>
 							<a href="#process" class="nav-link align-middle"><span>Process</span></a>
+							<a href="#processAuthentication" class="nav-link align-middle"><span class="pl-4">Authentication</span></a>
+							<a href="#processResearch" class="nav-link align-middle"><span class="pl-4">Company search</span></a>
+							<a href="#processOrderReport" class="nav-link align-middle"><span class="pl-4">Ordering report</span></a>
+							<a href="#processMonitoring" class="nav-link align-middle"><span class="pl-4">Ordering monitoring</span></a>
+							<a href="#processNotification" class="nav-link align-middle"><span class="pl-4">Notification</span></a>
 							<a href="#useCase" class="nav-link align-middle"><span>Use cases</span></a>
-							<a href="#security" class="nav-link align-middle"><span>Security</span></a>
 							<a href="#environment" class="nav-link align-middle"><span>Environment</span></a>
 							<a href="#version" class="nav-link align-middle"><span>Version</span></a>
 							<a href="#documentation" class="nav-link align-middle"><span>Documentation</span></a>
-							<a href="#faq" class="nav-link align-middle"><span class="pl-4">FAQ</span></a>
+							<a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/faq.html" class="nav-link align-middle"><span class="pl-4">FAQ</span></a>
 							<a href="#swagger" class="nav-link align-middle"><span class="pl-4">Swagger</span></a>
 							<a href="#postman" class="nav-link align-middle"><span class="pl-4">Postman</span></a>
 							<a href="#sample" class="nav-link align-middle"><span class="pl-4">Code samples</span></a>
@@ -72,31 +78,106 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-7">
+				<div class="col-9">
 					<div class="content-section">
-						<p>Report APIs is a service offered by ICON, Coface Business Information offer. It allows you to request informations about a company.</p>
+						<p>Report APIs is a service offered by <a target="_blank" href="https://information.coface.com/en-gb/api-solutions">ICON, Coface Business Information offer</a>. It allows you to request informations about a company.</p>
 						
 						<div id="product" class="mt-5">
 							<h2>Products</h2>
 							<hr>
 							<p>This API allows you to order and monitor :</p>
 							<ul>
-								<li>Business report (full or snapshot)</li>
-								<li>Credit report</li>
-								<li>Debtor risk assessment (with or without history and probability of default)</li>
+								<li>Business report (<a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/full-report.html">full</a> or <a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/snapshot.html">snapshot</a>)</li>
+								<li><a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/credit-report.html">Credit report</a></li>
+								<li><a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/dra.html">Debtor risk assessment</a> (with or without history and probability of default)</li>
 							</ul>
 							<p>The description of each product can be found <a target="_blank" href="https://information.coface.com/en-gb/api-solutions">here</a>.</p>
 							<p><b>Note :</b> Specific products can be available depending on your contrat with ICON.</p>
 						</div>
+						<div id="access" class="mt-5">
+							<h2>Access</h2>
+							<hr>
+							<p>Before calling our API, you need to</p>
+							<ol>
+								<li>Be registred in our customer database. You can get it by <a target="_blank" href="https://information.coface.com/en-gb/contact">contacting us</a>.</li>
+								<li>Create an account on our <a target="_blank" href="https://devportal.coface.com/">dev portal</a>.</li>
+								<li>Subscribe on "API Coface - Authentication".</li>
+								<li>Subscribe on "ICON Report API".</li>
+							</ol>
+							<h3>Security</h3>
+							<hr>
+							<p>Our API uses an OAuth2 protocol. You will need to request a token available 1H, before calling our API. (See <a href="#processAuthentication">Authentication process</a>)</p>
+						</div>
 						<div id="process" class="mt-5">
 							<h2>Process</h2>
 							<hr>
-							<p>You can either order a data or monitor it. Click below to this the different process.</p>
-							<ul><li>Order process</li></ul>
-							<img src="https://raw.githubusercontent.com/coface/business-information-api/master/report-api/documentation/process/orderRequestProcess.png" alt="Order process" class="img-fluid" style="min-width:1100px" />
-
-							<ul><li>Monitor process</li></ul>
-							<img src="https://raw.githubusercontent.com/coface/business-information-api/master/report-api/documentation/process/monitorRequestProcess.png" alt="Monitor process" class="img-fluid" style="min-width:1100px" />
+							<div id="processAuthentication" class="mt-4">
+								<h4>Authentication</h4>
+								<p>To get the token, you must call the /token endpoint of the "API Coface - Authentication" with your credential : login and password of your dev portal account in the request body and your api key in the "x-api-key" request header.</p>
+								<p>The received token must be put in the "authorization" request header along with the "x-api-key" request header.</p>
+								<p>Be aware that this token is valid only 1h.</p>
+								<p>Technical documentation can be found on <a target="_blank" href="https://devportal.coface.com/apis/ytinqd4ghc">dev portal</a>.</p>
+							</div>
+							<div id="processSearch" class="mt-4">
+								<h4>Company search</h4>
+								<p>To order monitoring or report, you need to find on which company you want the data.</p>
+								<p>To identify a company, you have two possibilities : use the Coface Id of the company or use an unique id from a national referential.</p>
+								<p>For example : in France, all companies must be registred in the National Institute of Statistics and Economic Studies (INSEE). This repository is used by Coface.</p>
+								<nav class="nav nav-tabs">
+								  <a class="nav-item nav-link active" href="#processResearchFunt" data-toggle="tab">Functional view</a>
+								  <a class="nav-item nav-link" href="#processResearchTech" data-toggle="tab">Technical view</a>
+								</nav>
+								<div class="tab-content">
+								  <div class="tab-pane active" id="processResearchFunt">
+									<img src="https://raw.githubusercontent.com/coface/business-information-api/master/report-api/documentation/process/searchCompaniesProcessFunct.png" alt="Company search process" class="img-fluid" style="max-width:800px" />
+								  </div>
+								  <div class="tab-pane" id="processResearchTech">
+									<img src="https://raw.githubusercontent.com/coface/business-information-api/master/report-api/documentation/process/searchCompaniesProcessTech.png" alt="Company search process" class="img-fluid" style="max-width:800px" /></div>
+								</div>
+							</div>
+							<div id="processOrderReport" class="mt-4">
+								<h4>Ordering a report</h4>
+								<nav class="nav nav-tabs">
+									<a class="nav-item nav-link active" href="#processOrderReportFunt" data-toggle="tab">Functional view</a>
+									<a class="nav-item nav-link" href="#processOrderReportTech" data-toggle="tab">Technical view</a>
+								</nav>
+								<div class="tab-content">
+									<div class="tab-pane active" id="processOrderReportFunt">
+										<img src="https://raw.githubusercontent.com/coface/business-information-api/master/report-api/documentation/process/orderReportProcessFunct.png" alt="Ordering a report" class="img-fluid" style="max-width:800px" />
+									</div>
+									<div class="tab-pane" id="processOrderReportTech">
+										In progress
+									</div>
+								</div>
+							</div>
+							<div id="processMonitoring" class="mt-4">
+								<h4>Ordering monitoring</h4>
+								<nav class="nav nav-tabs">
+								  <a class="nav-item nav-link active" href="#processMonitoringFunt" data-toggle="tab">Functional view</a>
+								  <a class="nav-item nav-link" href="#processMonitoringTech" data-toggle="tab">Technical view</a>
+								</nav>
+								<div class="tab-content">
+								  <div class="tab-pane active" id="processMonitoringFunt">
+									<img src="https://raw.githubusercontent.com/coface/business-information-api/master/report-api/documentation/process/orderMonitoringProcessFunct.png" alt="Company search process" class="img-fluid" style="max-width:800px" />
+								  </div>
+								  <div class="tab-pane" id="processMonitoringTech">
+									In progress
+								</div>
+							</div>
+							<div id="processNotification" class="mt-4">
+								<h4>Notification</h4>
+								<nav class="nav nav-tabs">
+								  <a class="nav-item nav-link active" href="#processNotificationFunt" data-toggle="tab">Functional view</a>
+								  <a class="nav-item nav-link" href="#processNotificationTech" data-toggle="tab">Technical view</a>
+								</nav>
+								<div class="tab-content">
+								  <div class="tab-pane active" id="processNotificationFunt">
+									In progress
+								  </div>
+								  <div class="tab-pane" id="processNotificationTech">
+									In progress
+								</div>
+							</div>
 						</div>
 						<div id="useCase" class="mt-5">
 							<h2>Use cases</h2>
@@ -127,15 +208,6 @@
 								<li>You didn't fill a callback url. Call on a regular basis "getNotifications".</li>
 							</ul>
 							<p>Once you get the notification id, retrieve the data by using the "getNotificationDocument" to retrieve the report associated with each notification.</p>
-						</div>
-						<div id="security" class="mt-5">
-							<h2>Security</h2>
-							<hr>
-							<p>Our API uses an api key authentification.</p>
-							<p>API keys are specific to Test or Production.</p>
-							<p>An API Keys is associated with a user account. To create an API key, log on to the online application, go to your <a target="_blank" href=	"https://information.coface.com/en-gb/my-account/my-profile">your profile page</a> and generate an API key.<br>
-							If this feature is not available, then your account has not yet been enabled for API access - <a target="_blank" href="https://information.coface.com/en-gb/contact">contact us</a>.</p>
-							<p>To revoke an existing API key, go to your profile and create a new API key - you will be warned that the old one will be revoked.</p>
 						</div>
 						<div id="environment" class="mt-5">
 							<h2>Environment</h2>

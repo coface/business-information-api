@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Icon Report API - Full Report Content</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="icon" href="https://raw.githubusercontent.com/coface/business-information-api/master/icon-logo.png">
+		<style>
+			.bg-icon {
+				background-color: #14375c;
+			}
+			h1, h2 {
+				color: #14375c;
+			}
+			.sticky-bar a {
+				color: white;
+			}
+			.sticky-bar a:hover {
+				background-color: #386ea8;
+			}
+			.sidebar-section {
+			  position: absolute;
+			  height: 100%;
+			  width: 100%;
+			}
+
+			.sidebar-item {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.sticky-bar {
+			  position: -webkit-sticky;
+				position: sticky;
+				top: 0;
+				padding: 0 15px;
+			}
+		</style>
+		<script type="text/javascript">
+			var scripts = [
+				{src:'https://code.jquery.com/jquery-3.6.0.min.js'},
+				{src:'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js'},
+				{src:'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js'}];
+
+			window.onload = function() {
+				loadScript(0);
+			};
+				
+			function loadScript(index) {
+				if (scripts[index]) { 
+					var script = document.createElement('script');
+					script.type = "text/javascript";
+					script.src = scripts[index].src;
+					script.crossOrigin = 'anonymous';	
+					document.getElementsByTagName('head')[0].appendChild(script);
+					script.onload = function() {
+						loadScript(index + 1);
+						if (index == 2) {
+							$('#treeXML').treeview({
+								data: [getXMLBusinessReport()],
+								collapseIcon:"fa fa-minus",
+								expandIcon:"fa fa-plus",
+								highlightSelected: false,
+								showTags: true
+							});
+						}
+					};
+				}
+			}
+
+            function getXMLBusinessReport() {
+                var report = {
+                    "text": "ICON",
+                    "tags": ["This is the root node of the entire XML document.", "ATTRIBUTE 'VERSION' : Indicates the version of the ICON XML that created the report. At the time of this writing, the current version was 1.0.1."],
+                    "nodes": [{
+                            "text": "ORDERSTATUS",
+                            "tags": ["Information concerning the status of the order and details reminding of the original request for research.   "],
+                            "nodes": [{
+                                    "text": "INTERCREDITORDERNUMBER",
+                                    "tags": ["Coface's internal order number. "]
+                                }, {
+                                    "text": "PROVIDER",
+                                    "tags": ["Information identifying the Coface office responsible for delivering the report. "],
+                                    "nodes": [{
+                                            "text": "PROVIDERID",
+                                            "tags": ["Internal Coface Id"]
+                                        }, {
+                                            "text": "NAME",
+                                            "tags": ["Name"]
+                                        }, {
+                                            "text": "SENDERID"
+                                        }, {
+                                            "text": "CITY",
+                                            "tags": ["City"]
+                                        }, {
+                                            "text": "COUNTRY",
+                                            "tags": ["Country", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "STREET",
+                                            "tags": ["Street"]
+                                        }, {
+                                            "text": "HOUSENUMBER",
+                                            "tags": ["House number"]
+                                        }, {
+                                            "text": "ZIPCODE",
+                                            "tags": ["Zip code"]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "CUSTOMER",
+                                    "nodes": [{
+                                            "text": "CUSTOMERID",
+                                            "tags": ["Internal Coface Id"]
+                                        }, {
+                                            "text": "NAME",
+                                            "tags": ["Name"]
+                                        }, {
+                                            "text": "RECIPIENTID"
+                                        }, {
+                                            "text": "CITY",
+                                            "tags": ["City"]
+                                        }, {
+                                            "text": "COUNTRY",
+                                            "tags": ["Country", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "STREET",
+                                            "tags": ["Street"]
+                                        }, {
+                                            "text": "HOUSENUMBER",
+                                            "tags": ["House number"]
+                                        }, {
+                                            "text": "ZIPCODE",
+                                            "tags": ["Zip code"]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "CUSTOMERSREFERENCE",
+                                    "tags": ["Identifier of the request in the customer system."]
+                                }, {
+                                    "text": "PURCHASEORDERNUMBER"
+                                }, {
+                                    "text": "LANGUAGE",
+                                    "tags": ["Language of the order and report. ", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                }, {
+                                    "text": "PRODUCT",
+                                    "tags": ["Information identifying the product which was or can be ordered and which leads to the ICON XML report being delivered. ", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                }, {
+                                    "text": "REPORTMIMETYPE",
+                                    "tags": ["Always \"text/xml\" for ICON XML reports. "]
+                                }, {
+                                    "text": "BALANCESHEETLAYOUT",
+                                    "tags": ["(Optional) The balancesheet layout of a company provides information about how a company presents its financials. Typical values are: “Bank”, “Insurance company”, “Joint stock company”, “limited liability company” etc. ", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                }, {
+                                    "text": "TIMESTAMP"
+                                }, {
+                                    "text": "STATUS",
+                                    "tags": ["Status of the order. ", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                }, {
+                                    "text": "REQUIREDBY",
+                                    "tags": ["The required delivery date of the final report associated with the order. "]
+                                }, {
+                                    "text": "GIVENCOMPANYNAME",
+                                    "tags": ["The name of the company to be researched, as given by the customer at ordering time. "]
+                                }, {
+                                    "text": "REQUESTEDCOMPANYINFORMATION",
+                                    "tags": ["(Optional) Further information provided by the customer to help identify the company to be researched. "],
+                                    "nodes": [{
+                                            "text": "COMPANYNAME"
+                                        }, {
+                                            "text": "REGISTRATIONCOUNTRY",
+                                            "tags": ["The registration company of the related company.", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ZIPCODE",
+                                            "tags": ["Zip code"]
+                                        }, {
+                                            "text": "CITY",
+                                            "tags": ["City"]
+                                        }, {
+                                            "text": "STREET",
+                                            "tags": ["Street"]
+                                        }, {
+                                            "text": "HOUSENUMBER",
+                                            "tags": ["House number"]
+                                        }, {
+                                            "text": "ADDITIONALADDRESSLINE"
+                                        }, {
+                                            "text": "COUNTRY",
+                                            "tags": ["Country", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "TELEPHONAREACODE"
+                                        }, {
+                                            "text": "TELEPHONENUMBER"
+                                        }, {
+                                            "text": "NATIONALNUMBER"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "QUESTION",
+                                    "tags": ["The text of a specific question that the customer asks at the time of ordering the research. "]
+                                }, {
+                                    "text": "ANSWER",
+                                    "tags": ["Answer provided by Coface to the specific question asked by the customer at the time of ordering research. "]
+                                }
+                            ]
+                        }, {
+                            "text": "CREDITREPORT",
+                            "tags": ["Contains details of the credit report."],
+                            "nodes": [{
+                                    "text": "COMPANY",
+                                    "tags": ["Contains information identifying the researched company, including name and addresses, official identification numbers, etc."],
+                                    "nodes": [{
+                                            "text": "COPYRIGHT"
+                                        }, {
+                                            "text": "INTERCREDITNUMBER",
+                                            "tags": ["The ICON internal company number of the researched company. "]
+                                        }, {
+                                            "text": "NATIONALID"
+                                        }, {
+                                            "text": "STATUS",
+                                            "tags": ["An indicator of whether the company is active. ", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "COMPANYNAME"
+                                        }, {
+                                            "text": "SORTNAME",
+                                            "tags": ["A version of the company's name that is better suited for lists. For example, this version of the name may omit the legal form of the company."]
+                                        }, {
+                                            "text": "INTERNATIONALNAME",
+                                            "tags": ["A company name used for an international audience. Particularly useful if the COMPANYNAME is spelled using the Cyrillic alphabet; in that case, this field will contain a latinized version of the name. "]
+                                        }, {
+                                            "text": "EASYNUMBER"
+                                        }, {
+                                            "text": "SHORTNAME",
+                                            "tags": ["A version of the company's name that is better suited for lists. For example, this version of the name may omit the legal form of the company. "]
+                                        }, {
+                                            "text": "LEGALFORM",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "REGISTRATION",
+                                            "nodes": [{
+                                                    "text": "NUMBER"
+                                                }, {
+                                                    "text": "CITY",
+                                                    "tags": ["City"]
+                                                }, {
+                                                    "text": "COUNTRY",
+                                                    "tags": ["Country"]
+                                                }, {
+                                                    "text": "COUNTRYREGION",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DATE"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMPANYCOMMENT"
+                                        }, {
+                                            "text": "HISTORY"
+                                        }, {
+                                            "text": "TAXNUMBER",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "VALUE",
+                                                    "tags": ["Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "STATISTICALNUMBER",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "VALUE",
+                                                    "tags": ["Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "VATNUMBER",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "VALUE",
+                                                    "tags": ["Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "VALIDITYDATE",
+                                            "tags": ["The date on which the researched data is considered valid. "]
+                                        }, {
+                                            "text": "LASTMAJORUPDATE"
+                                        }, {
+                                            "text": "ESTABLISHED",
+                                            "tags": ["The date on which the company was founded. "]
+                                        }, {
+                                            "text": "CAPITAL",
+                                            "nodes": [{
+                                                    "text": "INDICATOR",
+                                                    "nodes": [{
+                                                            "text": "TYPE",
+                                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "DATE"
+                                                        }, {
+                                                            "text": "FROMDATE",
+                                                            "tags": ["Generally unused. Refer to DATE. If used, then it refers to the start date of the period in which the financial indicator value is relevant."]
+                                                        }, {
+                                                            "text": "TODATE",
+                                                            "tags": ["Generally unused. Refer to DATE. If used, then it refers to the end date of the period in which the financial indicator value is relevant."]
+                                                        }, {
+                                                            "text": "FROMAMOUNT"
+                                                        }, {
+                                                            "text": "TOAMOUNT",
+                                                            "tags": ["Generally unused. If used, then the financial indicator is a range of values, with the FROMAMOUNT being the low end of the range, and this field being the high end."]
+                                                        }, {
+                                                            "text": "CURRENCY",
+                                                            "tags": ["Iso code of the currency", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "DIMENSION",
+                                                            "tags": ["A multiplier for a numerical value, or an indication that the value is a percentage. Possible values:\u000B\u000B0 = Value is expressed absolutely (no multiplier)"]
+                                                        }, {
+                                                            "text": "MEASURE",
+                                                            "tags": ["Indicates the accuracy of the given financial indicator value. \u000B1 ... approximately \u000B2 ... estimated \u000B3 ... presumed \u000B4 ... no figures are known \u000B5 ... satisfactory \u000B6 ... monthly \u000B7 ... expected \u000B8 ... exact \u000B9 ... 30 days \u000B10 ... 60 days \u000B11 ... 90 days \u000B12 ... 120 days \u000B13 ... consolidated \u000B30 ... provisional"]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "NATIONALCURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ALIASES"
+                                        }, {
+                                            "text": "ADDRESSES",
+                                            "nodes": [{
+                                                    "text": "ADDRESS",
+                                                    "tags": ["Address"],
+                                                    "nodes": [{
+                                                            "text": "ADDRESSTYPE",
+                                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "RUNNINGNUMBER"
+                                                        }, {
+                                                            "text": "NAME",
+                                                            "tags": ["Name"]
+                                                        }, {
+                                                            "text": "STREET",
+                                                            "tags": ["Street"]
+                                                        }, {
+                                                            "text": "HOUSENUMBER",
+                                                            "tags": ["House number"]
+                                                        }, {
+                                                            "text": "ADDITIONALADDRESSLINE"
+                                                        }, {
+                                                            "text": "ZIPCODE",
+                                                            "tags": ["Zip code"]
+                                                        }, {
+                                                            "text": "CITY",
+                                                            "tags": ["City"]
+                                                        }, {
+                                                            "text": "COUNTRY",
+                                                            "tags": ["Country", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "COUNTRYREGION",
+                                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "TELEPHONE",
+                                                            "nodes": [{
+                                                                    "text": "INTERNATIONAL"
+                                                                }, {
+                                                                    "text": "AREA"
+                                                                }, {
+                                                                    "text": "NUMBER"
+                                                                }
+                                                            ]
+                                                        }, {
+                                                            "text": "FAX",
+                                                            "nodes": [{
+                                                                    "text": "INTERNATIONAL"
+                                                                }, {
+                                                                    "text": "AREA"
+                                                                }, {
+                                                                    "text": "NUMBER"
+                                                                }
+                                                            ]
+                                                        }, {
+                                                            "text": "EMAIL"
+                                                        }, {
+                                                            "text": "INTERNET"
+                                                        }
+                                                    ]
+                                                }, {
+                                                    "text": "COMMENT"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "PRIMARYNATIONALIDENTIFIER",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "VALUE",
+                                                    "tags": ["Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "SHAREHOLDERS",
+                                    "nodes": [{
+                                            "text": "SHAREHOLDER",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "NAME",
+                                                    "tags": ["Name"]
+                                                }, {
+                                                    "text": "ADDRESS",
+                                                    "tags": ["Address"],
+                                                    "nodes": [{
+                                                            "text": "ADDRESSTYPE",
+                                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "RUNNINGNUMBER"
+                                                        }, {
+                                                            "text": "NAME",
+                                                            "tags": ["Name"]
+                                                        }, {
+                                                            "text": "STREET",
+                                                            "tags": ["Street"]
+                                                        }, {
+                                                            "text": "HOUSENUMBER",
+                                                            "tags": ["House number"]
+                                                        }, {
+                                                            "text": "ADDITIONALADDRESSLINE"
+                                                        }, {
+                                                            "text": "ZIPCODE",
+                                                            "tags": ["Zip code"]
+                                                        }, {
+                                                            "text": "CITY",
+                                                            "tags": ["City"]
+                                                        }, {
+                                                            "text": "COUNTRY",
+                                                            "tags": ["Country", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "TELEPHONE",
+                                                            "nodes": [{
+                                                                    "text": "INTERNATIONAL"
+                                                                }, {
+                                                                    "text": "AREA"
+                                                                }, {
+                                                                    "text": "NUMBER"
+                                                                }
+                                                            ]
+                                                        }, {
+                                                            "text": "FAX",
+                                                            "nodes": [{
+                                                                    "text": "INTERNATIONAL"
+                                                                }, {
+                                                                    "text": "AREA"
+                                                                }, {
+                                                                    "text": "NUMBER"
+                                                                }
+                                                            ]
+                                                        }, {
+                                                            "text": "EMAIL"
+                                                        }, {
+                                                            "text": "INTERNET"
+                                                        }
+                                                    ]
+                                                }, {
+                                                    "text": "ACTIVESINCE"
+                                                }, {
+                                                    "text": "ACTIVEUNTIL"
+                                                }, {
+                                                    "text": "EQUITYAMOUNT"
+                                                }, {
+                                                    "text": "EQUITYCURRENCY",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "EQUITYDIMENSION",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "ISPERSON"
+                                                }, {
+                                                    "text": "INTERCREDITNUMBER"
+                                                }, {
+                                                    "text": "REGISTRATIONCOUNTRY",
+                                                    "tags": ["The registration company of the related company.", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "REGISTRATIONPLACE"
+                                                }, {
+                                                    "text": "REGISTRATIONDATE"
+                                                }, {
+                                                    "text": "REGISTRATIONNUMBER"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "FORMERSHAREHOLDERS"
+                                }, {
+                                    "text": "MANAGEMENT",
+                                    "nodes": [{
+                                            "text": "MANAGER",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "NAME",
+                                                    "tags": ["Name"]
+                                                }, {
+                                                    "text": "ACTIVESINCE"
+                                                }, {
+                                                    "text": "ACTIVEUNTIL"
+                                                }, {
+                                                    "text": "EQUITYAMOUNT"
+                                                }, {
+                                                    "text": "EQUITYCURRENCY",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "EQUITYDIMENSION",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "ISPERSON"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENTS"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "PERSONFUNCTIONSINOTHERCOMPANIES",
+                                    "tags": ["Information concerning relationships that people associated with the researched company (e.g., managers) have with other companies."],
+                                    "nodes": [{
+                                            "text": "PERSONFUNCTIONS",
+                                            "tags": ["A collection of zero or more functionary relationships that people associated with the researched company have with other companies.   "],
+                                            "nodes": [{
+                                                    "text": "NAME",
+                                                    "tags": ["Name"]
+                                                }, {
+                                                    "text": "FUNCTION",
+                                                    "tags": ["Functional relationship that person has with company"],
+                                                    "nodes": [{
+                                                            "text": "POSITION",
+                                                            "tags": ["Textual description of the position in the company. "]
+                                                        }, {
+                                                            "text": "FUNCTIONCOMPANY",
+                                                            "tags": ["Identification information for the company in which the position is held. ", "ATTRIBUTE 'NATIONALID' : "]
+                                                        }, {
+                                                            "text": "COUNTRY",
+                                                            "tags": ["Country", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "AUTHORITY",
+                                    "tags": ["Describes executive authority in the company, i.e., who may officially represent the company."],
+                                    "nodes": [{
+                                            "text": "COMMENT",
+                                            "tags": ["A general comment concerning executive authority in the company. "]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "ACTIVITIES",
+                                    "nodes": [{
+                                            "text": "ACTIVITY",
+                                            "nodes": [{
+                                                    "text": "PRIORITY"
+                                                }, {
+                                                    "text": "NACECODE"
+                                                }, {
+                                                    "text": "NACETEXT"
+                                                }, {
+                                                    "text": "LOCALACTIVITYCODE"
+                                                }, {
+                                                    "text": "LOCALACTIVITYTEXT"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "IMPORTS",
+                                    "tags": ["Information concerning known import activity of the company."],
+                                    "nodes": [{
+                                            "text": "IMPORT",
+                                            "tags": ["Structured summary of specific import activity. "],
+                                            "nodes": [{
+                                                    "text": "DATE"
+                                                }, {
+                                                    "text": "AMOUNT",
+                                                    "tags": ["Amount of the unpaid invoice."]
+                                                }, {
+                                                    "text": "CURRENCY",
+                                                    "tags": ["Iso code of the currency", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DIMENSION",
+                                                    "tags": ["A multiplier for a numerical value, or an indication that the value is a percentage. Possible values:\u000B\u000B0 = Value is expressed absolutely (no multiplier)", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "COUNTRY",
+                                                    "tags": ["Country", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT",
+                                            "tags": ["A general comment concerning the company's import activity. "]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "EXPORTS",
+                                    "tags": ["Information concerning known export activity of the company."],
+                                    "nodes": [{
+                                            "text": "EXPORT",
+                                            "tags": ["Structured summary of specific export activity. "],
+                                            "nodes": [{
+                                                    "text": "DATE"
+                                                }, {
+                                                    "text": "AMOUNT",
+                                                    "tags": ["Amount of the unpaid invoice."]
+                                                }, {
+                                                    "text": "CURRENCY",
+                                                    "tags": ["Iso code of the currency", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DIMENSION",
+                                                    "tags": ["A multiplier for a numerical value, or an indication that the value is a percentage. Possible values:\u000B\u000B0 = Value is expressed absolutely (no multiplier)", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "COUNTRY",
+                                                    "tags": ["Country", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT",
+                                            "tags": ["A general comment concerning the company's export activity. "]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "KEYDATA",
+                                    "tags": ["A collection of important financial indicators and/or ratios. A subset of the indicators on the balance sheet."],
+                                    "nodes": [{
+                                            "text": "KEYDATAINDICATORS",
+                                            "nodes": [{
+                                                    "text": "INDICATOR",
+                                                    "nodes": [{
+                                                            "text": "TYPE",
+                                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "DATE"
+                                                        }, {
+                                                            "text": "FROMDATE",
+                                                            "tags": ["Generally unused. Refer to DATE. If used, then it refers to the start date of the period in which the financial indicator value is relevant."]
+                                                        }, {
+                                                            "text": "TODATE",
+                                                            "tags": ["Generally unused. Refer to DATE. If used, then it refers to the end date of the period in which the financial indicator value is relevant."]
+                                                        }, {
+                                                            "text": "FROMAMOUNT"
+                                                        }, {
+                                                            "text": "TOAMOUNT",
+                                                            "tags": ["Generally unused. If used, then the financial indicator is a range of values, with the FROMAMOUNT being the low end of the range, and this field being the high end."]
+                                                        }, {
+                                                            "text": "CURRENCY",
+                                                            "tags": ["Iso code of the currency", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "DIMENSION",
+                                                            "tags": ["A multiplier for a numerical value, or an indication that the value is a percentage. Possible values:\u000B\u000B0 = Value is expressed absolutely (no multiplier)", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "MEASURE",
+                                                            "tags": ["Indicates the accuracy of the given financial indicator value. \u000B1 ... approximately \u000B2 ... estimated \u000B3 ... presumed \u000B4 ... no figures are known \u000B5 ... satisfactory \u000B6 ... monthly \u000B7 ... expected \u000B8 ... exact \u000B9 ... 30 days \u000B10 ... 60 days \u000B11 ... 90 days \u000B12 ... 120 days \u000B13 ... consolidated \u000B30 ... provisional", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "KEYDATARATIOS",
+                                            "nodes": [{
+                                                    "text": "RATIO",
+                                                    "nodes": [{
+                                                            "text": "TYPE",
+                                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "DESCRIPTION",
+                                                            "tags": ["A longer description of the type of ratio. This will typically hold a textual representation of the formula used to calculate the ratio, such as \"( Current investments + Current receivables ) / Current liabilities\" for the Quick Ratio."]
+                                                        }, {
+                                                            "text": "DATE"
+                                                        }, {
+                                                            "text": "FROMDATE",
+                                                            "tags": ["Generally unused. Refer to DATE. If used, then it refers to the start date of the period in which the financial indicator value is relevant."]
+                                                        }, {
+                                                            "text": "TODATE",
+                                                            "tags": ["Generally unused. Refer to DATE. If used, then it refers to the end date of the period in which the financial indicator value is relevant."]
+                                                        }, {
+                                                            "text": "FROMAMOUNT"
+                                                        }, {
+                                                            "text": "CURRENCY",
+                                                            "tags": ["Iso code of the currency"]
+                                                        }, {
+                                                            "text": "RESULTVALUE"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "CALCULATEDKEYDATAINFO"
+                                }, {
+                                    "text": "BALANCESHEET",
+                                    "tags": ["Company balance sheet."],
+                                    "nodes": [{
+                                            "text": "BALANCESHEETITEM",
+                                            "tags": ["Section of a balance sheet, such as \"Profit and Loss\", \"Liabilities\", etc. Contains one or more financial indicators which express the dates and values for each individual component of the balance sheet item.", "ATTRIBUTE 'NAME' : Name", "ATTRIBUTE 'TYPE'"]
+                                        }, {
+                                            "text": "COMMENT",
+                                            "tags": ["A general comment concerning the particular financial indicator. "]
+                                        }, {
+                                            "text": "HISTORICALEXCHANGERATES",
+                                            "nodes": [{
+                                                    "text": "RATE",
+                                                    "tags": ["ATTRIBUTE 'CURRENCY' : Iso code of the currency", "ATTRIBUTE 'REFERENCECURRENCY'"],
+                                                    "nodes": [{
+                                                            "text": "YEAR"
+                                                        }, {
+                                                            "text": "EXCHANGERATE"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "RATIOS",
+                                    "tags": ["Financial ratios which Coface has calculated for the company. Examples include the Quick Ratio, Return on Equity, Return on Assets, etc."],
+                                    "nodes": [{
+                                            "text": "RATIO",
+                                            "tags": ["A set of financial ratios calculated by Coface for a company."],
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DESCRIPTION",
+                                                    "tags": ["A longer description of the type of ratio. This will typically hold a textual representation of the formula used to calculate the ratio, such as \"( Current investments + Current receivables ) / Current liabilities\" for the Quick Ratio."]
+                                                }, {
+                                                    "text": "DATE"
+                                                }, {
+                                                    "text": "FROMDATE",
+                                                    "tags": ["Generally unused. Refer to DATE. If used, then it refers to the start date of the period in which the financial indicator value is relevant."]
+                                                }, {
+                                                    "text": "TODATE",
+                                                    "tags": ["Generally unused. Refer to DATE. If used, then it refers to the end date of the period in which the financial indicator value is relevant."]
+                                                }, {
+                                                    "text": "FROMAMOUNT"
+                                                }, {
+                                                    "text": "CURRENCY",
+                                                    "tags": ["Iso code of the currency"]
+                                                }, {
+                                                    "text": "RESULTVALUE"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "WORKFORCE",
+                                    "nodes": [{
+                                            "text": "INDICATOR",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DATE"
+                                                }, {
+                                                    "text": "FROMDATE",
+                                                    "tags": ["Generally unused. Refer to DATE. If used, then it refers to the start date of the period in which the financial indicator value is relevant."]
+                                                }, {
+                                                    "text": "TODATE",
+                                                    "tags": ["Generally unused. Refer to DATE. If used, then it refers to the end date of the period in which the financial indicator value is relevant."]
+                                                }, {
+                                                    "text": "FROMAMOUNT"
+                                                }, {
+                                                    "text": "TOAMOUNT",
+                                                    "tags": ["Generally unused. If used, then the financial indicator is a range of values, with the FROMAMOUNT being the low end of the range, and this field being the high end."]
+                                                }, {
+                                                    "text": "CURRENCY",
+                                                    "tags": ["Iso code of the currency", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DIMENSION",
+                                                    "tags": ["A multiplier for a numerical value, or an indication that the value is a percentage. Possible values:\u000B\u000B0 = Value is expressed absolutely (no multiplier)", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "MEASURE",
+                                                    "tags": ["Indicates the accuracy of the given financial indicator value. \u000B1 ... approximately \u000B2 ... estimated \u000B3 ... presumed \u000B4 ... no figures are known \u000B5 ... satisfactory \u000B6 ... monthly \u000B7 ... expected \u000B8 ... exact \u000B9 ... 30 days \u000B10 ... 60 days \u000B11 ... 90 days \u000B12 ... 120 days \u000B13 ... consolidated \u000B30 ... provisional", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "MOTORVEHICLES",
+                                    "nodes": [{
+                                            "text": "MOTORVEHICLE",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DATE"
+                                                }, {
+                                                    "text": "OWNERSHIP",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "AMOUNT",
+                                                    "tags": ["Amount of the unpaid invoice."]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "REALESTATES",
+                                    "tags": ["Information concerning real estate holdings of the company."],
+                                    "nodes": [{
+                                            "text": "REALESTATE",
+                                            "tags": ["Structured information concerning a real estate holding of the company."],
+                                            "nodes": [{
+                                                    "text": "ADDRESS",
+                                                    "tags": ["Address"],
+                                                    "nodes": [{
+                                                            "text": "ADDRESSTYPE",
+                                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "RUNNINGNUMBER"
+                                                        }, {
+                                                            "text": "NAME",
+                                                            "tags": ["Name"]
+                                                        }, {
+                                                            "text": "STREET",
+                                                            "tags": ["Street"]
+                                                        }, {
+                                                            "text": "HOUSENUMBER",
+                                                            "tags": ["House number"]
+                                                        }, {
+                                                            "text": "ADDITIONALADDRESSLINE"
+                                                        }, {
+                                                            "text": "ZIPCODE",
+                                                            "tags": ["Zip code"]
+                                                        }, {
+                                                            "text": "CITY",
+                                                            "tags": ["City"]
+                                                        }, {
+                                                            "text": "COUNTRY",
+                                                            "tags": ["Country", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "COUNTRYREGION",
+                                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                        }, {
+                                                            "text": "TELEPHONE",
+                                                            "nodes": [{
+                                                                    "text": "INTERNATIONAL"
+                                                                }, {
+                                                                    "text": "AREA"
+                                                                }, {
+                                                                    "text": "NUMBER"
+                                                                }
+                                                            ]
+                                                        }, {
+                                                            "text": "FAX",
+                                                            "nodes": [{
+                                                                    "text": "INTERNATIONAL"
+                                                                }, {
+                                                                    "text": "AREA"
+                                                                }, {
+                                                                    "text": "NUMBER"
+                                                                }
+                                                            ]
+                                                        }, {
+                                                            "text": "EMAIL"
+                                                        }, {
+                                                            "text": "INTERNET"
+                                                        }
+                                                    ]
+                                                }, {
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "SIZE"
+                                                }, {
+                                                    "text": "SIZEDIMENSION",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "VALUE",
+                                                    "tags": ["Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "VALUEDIMENSION",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "VALUECURRENCY",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DEBT",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "SHARE"
+                                                }, {
+                                                    "text": "OWNERSHIP",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "RENT",
+                                                    "tags": ["ATTRIBUTE 'CURRENCY' : Iso code of the currency", "ATTRIBUTE 'PAYMENTPER'"]
+                                                }, {
+                                                    "text": "AREACOMMENT",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "CONDITION",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "EQUIPMENT",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "PREMISESSHARED",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "LINKEDCOMPANIES",
+                                    "tags": ["Information concerning companies with which the researched company has a legal relationship.   "],
+                                    "nodes": [{
+                                            "text": "LINKEDCOMPANY",
+                                            "tags": ["Structured information describing a company's relationship to a single other company."],
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["The type of the relationship to the other company. Sample values include: Mother, Subsidiary, Branch, Trustee. ", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "NAME",
+                                                    "tags": ["Name"]
+                                                }, {
+                                                    "text": "INTERCREDITNUMBER",
+                                                    "tags": ["ICON's internal identification number for the related company. "]
+                                                }, {
+                                                    "text": "REGISTRATIONCOUNTRY",
+                                                    "tags": ["The registration company of the related company. ", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "FUNCTIONARYCOMPANIES"
+                                }, {
+                                    "text": "BANKCONNECTIONS",
+                                    "tags": ["Information concerning a company's bank accounts."],
+                                    "nodes": [{
+                                            "text": "BANKCONNECTION",
+                                            "tags": ["Structured information concerning a single bank account."],
+                                            "nodes": [{
+                                                    "text": "BANK",
+                                                    "tags": ["Identifies the bank", "ATTRIBUTE 'INTERCREDITNUMBER' : ICON's internal identification number for the bank company."]
+                                                }, {
+                                                    "text": "LOCATED",
+                                                    "tags": ["The bank's location. "]
+                                                }, {
+                                                    "text": "ACCOUNTNUMBER",
+                                                    "tags": ["The company's account number at the bank. "]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "SHARECAPITAL",
+                                    "tags": ["A single ratio resulting from Coface's calculations."],
+                                    "nodes": [{
+                                            "text": "NOMINALCAPITAL_AMOUNT"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "NOMINALCAPITAL_DATE"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES1_NUMBER"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES1_CLASS",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES1_VALUEPERSHARE_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES1_VALUEPERSHARE_AMOUNT"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES2_NUMBER"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES2_CLASS",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES2_VALUEPERSHARE_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES2_VALUEPERSHARE_AMOUNT"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES3_NUMBER"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES3_CLASS",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES3_VALUEPERSHARE_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "NOMINALCAPITAL_SHARES3_VALUEPERSHARE_AMOUNT"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_PREVIOUS1_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "NOMINALCAPITAL_PREVIOUS1_AMOUNT"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_PREVIOUS1_DATE"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_PREVIOUS2_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "NOMINALCAPITAL_PREVIOUS2_AMOUNT"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_PREVIOUS2_DATE"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_PREVIOUS3_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "NOMINALCAPITAL_PREVIOUS3_AMOUNT"
+                                        }, {
+                                            "text": "NOMINALCAPITAL_PREVIOUS3_DATE"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_AMOUNT"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_DATE"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES1_NUMBER"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES1_CLASS",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES1_VALUEPERSHARE_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES1_VALUEPERSHARE_AMOUNT"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES2_NUMBER"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES2_CLASS",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES2_VALUEPERSHARE_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES2_VALUEPERSHARE_AMOUNT"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES3_NUMBER"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES3_CLASS",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES3_VALUEPERSHARE_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_SHARES3_VALUEPERSHARE_AMOUNT"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_PREVIOUS1_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_PREVIOUS1_AMOUNT"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_PREVIOUS1_DATE"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_PREVIOUS2_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_PREVIOUS2_AMOUNT"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_PREVIOUS2_DATE"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_PREVIOUS3_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_PREVIOUS3_AMOUNT"
+                                        }, {
+                                            "text": "ISSUEDCAPITAL_PREVIOUS3_DATE"
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_AMOUNT"
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_DATE"
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_CASH_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_CASH_AMOUNT"
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_NONCASH_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_NONCASH_AMOUNT"
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_PREVIOUS1_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_PREVIOUS1_AMOUNT"
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_PREVIOUS1_DATE"
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_PREVIOUS2_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_PREVIOUS2_AMOUNT"
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_PREVIOUS2_DATE"
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_PREVIOUS3_CURRENCY",
+                                            "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_PREVIOUS3_AMOUNT"
+                                        }, {
+                                            "text": "PAIDUPCAPITAL_PREVIOUS3_DATE"
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "DATES",
+                                    "tags": ["A collection of dates important to the company, \"date of update of business licence\", \"VAT registration date\", etc."],
+                                    "nodes": [{
+                                            "text": "DATEITEM",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DATE"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "ADDITIONALINFORMATION",
+                                    "tags": ["A collection of various identification numbers for the company, if available. Examples might include an international VAT number, Eurogate number, etc."],
+                                    "nodes": [{
+                                            "text": "ADDITIONALINFORMATIONITEM",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "VALUE",
+                                                    "tags": ["Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "ADDITIONALCOMMENTS",
+                                    "tags": ["A collection of additional comments about the company, if applicable. Some examples of the types of comments that might be available include: \"Litigation against principals\", \"Major customers\", \"Major suppliers\", etc"],
+                                    "nodes": [{
+                                            "text": "ADDITIONALCOMMENTITEM",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "TEXT"
+                                                }, {
+                                                    "text": "PARAMETER"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "PAYMENTINDEX",
+                                    "nodes": [{
+                                            "text": "SOLVENCY",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "TEXT",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "TEXTCODE",
+                                                    "tags": ["Coface internal code identifying its assessment.", "ATTRIBUTE 'EXACTVALUE' : ", "ATTRIBUTE 'VALUE'"]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "PAYMENTREFERENCES",
+                                    "tags": ["Collection of information concerning known, actual payment history of the company."]
+                                }, {
+                                    "text": "INSOLVENCY",
+                                    "tags": ["The insolvency status of a company, if any. For details of specific insolvency proceedings, see ADDITIONALINSOLVENCYLIST.   "],
+                                    "nodes": [{
+                                            "text": "SOLVENCY",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "TEXT",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "ADDITIONALINSOLVENCYLIST",
+                                    "tags": ["The insolvency status of a company, if any. For details of specific insolvency proceedings, see ADDITIONALINSOLVENCYLIST.   "],
+                                    "nodes": [{
+                                            "text": "ADDITIONALINSOLVENCY",
+                                            "tags": ["Details of a single insolvency proceeding against the company. "],
+                                            "nodes": [{
+                                                    "text": "TEXT",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "INFORMATIONDATE",
+                                                    "tags": ["xxxx"]
+                                                }, {
+                                                    "text": "COURTDECISIONDATE",
+                                                    "tags": ["Date, if any, upon which a court reached a decision regarding the insolvency proceeding."]
+                                                }, {
+                                                    "text": "COURTPUBLISHDATE"
+                                                }, {
+                                                    "text": "COURTNUMBER"
+                                                }, {
+                                                    "text": "COURTNAME",
+                                                    "tags": ["Name of the court overseeing the insolvency proceeding."]
+                                                }, {
+                                                    "text": "COURTADDRESS",
+                                                    "tags": ["Address of the court overseeing the insolvency proceeding."]
+                                                }, {
+                                                    "text": "PUBLICNAME"
+                                                }, {
+                                                    "text": "NUMBERPUBLIC"
+                                                }, {
+                                                    "text": "PUBLICTEXT"
+                                                }, {
+                                                    "text": "DEADLINE"
+                                                }, {
+                                                    "text": "TRUSTEENAME"
+                                                }, {
+                                                    "text": "TRUSTEEADDRESS"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "RATINGTEXTS",
+                                    "tags": ["Collection of free-form textual information about elements of the company's financial condition which contributed to its company rating. "],
+                                    "nodes": [{
+                                            "text": "RATINGTEXTCOMPANYSIZE"
+                                        }, {
+                                            "text": "RATINGTEXTTURNOVER"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "DEBTCOLLECTION",
+                                    "tags": ["Details of known debt collection actions against the company."],
+                                    "nodes": [{
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "MAXIMUMCREDIT",
+                                    "tags": ["Coface's assessment of the maximum credit to be extended to the company.   "],
+                                    "nodes": [{
+                                            "text": "INDICATOR",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DATE"
+                                                }, {
+                                                    "text": "FROMDATE",
+                                                    "tags": ["Generally unused. Refer to DATE. If used, then it refers to the start date of the period in which the financial indicator value is relevant."]
+                                                }, {
+                                                    "text": "TODATE",
+                                                    "tags": ["Generally unused. Refer to DATE. If used, then it refers to the end date of the period in which the financial indicator value is relevant."]
+                                                }, {
+                                                    "text": "FROMAMOUNT"
+                                                }, {
+                                                    "text": "TOAMOUNT",
+                                                    "tags": ["Generally unused. If used, then the financial indicator is a range of values, with the FROMAMOUNT being the low end of the range, and this field being the high end."]
+                                                }, {
+                                                    "text": "CURRENCY",
+                                                    "tags": ["Iso code of the currency", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DIMENSION",
+                                                    "tags": ["A multiplier for a numerical value, or an indication that the value is a percentage. Possible values:\u000B\u000B0 = Value is expressed absolutely (no multiplier)", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "MEASURE",
+                                                    "tags": ["Indicates the accuracy of the given financial indicator value. \u000B1 ... approximately \u000B2 ... estimated \u000B3 ... presumed \u000B4 ... no figures are known \u000B5 ... satisfactory \u000B6 ... monthly \u000B7 ... expected \u000B8 ... exact \u000B9 ... 30 days \u000B10 ... 60 days \u000B11 ... 90 days \u000B12 ... 120 days \u000B13 ... consolidated \u000B30 ... provisional", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "COMMENT"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "MAXIMUMCREDITHISTORY",
+                                    "nodes": [{
+                                            "text": "MAXIMUMCREDITENTRY",
+                                            "nodes": [{
+                                                    "text": "MAXIMUMCREDIT",
+                                                    "tags": ["Coface's assessment of the maximum credit to be extended to the company. "],
+                                                    "nodes": [{
+                                                            "text": "INDICATOR",
+                                                            "nodes": [{
+                                                                    "text": "TYPE",
+                                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                                }, {
+                                                                    "text": "DATE"
+                                                                }, {
+                                                                    "text": "FROMDATE",
+                                                                    "tags": ["Generally unused. Refer to DATE. If used, then it refers to the start date of the period in which the financial indicator value is relevant."]
+                                                                }, {
+                                                                    "text": "TODATE",
+                                                                    "tags": ["Generally unused. Refer to DATE. If used, then it refers to the end date of the period in which the financial indicator value is relevant."]
+                                                                }, {
+                                                                    "text": "FROMAMOUNT"
+                                                                }, {
+                                                                    "text": "TOAMOUNT",
+                                                                    "tags": ["Generally unused. If used, then the financial indicator is a range of values, with the FROMAMOUNT being the low end of the range, and this field being the high end."]
+                                                                }, {
+                                                                    "text": "CURRENCY",
+                                                                    "tags": ["Iso code of the currency", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                                }, {
+                                                                    "text": "DIMENSION",
+                                                                    "tags": ["A multiplier for a numerical value, or an indication that the value is a percentage. Possible values:\u000B\u000B0 = Value is expressed absolutely (no multiplier)", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                                }, {
+                                                                    "text": "MEASURE",
+                                                                    "tags": ["Indicates the accuracy of the given financial indicator value. \u000B1 ... approximately \u000B2 ... estimated \u000B3 ... presumed \u000B4 ... no figures are known \u000B5 ... satisfactory \u000B6 ... monthly \u000B7 ... expected \u000B8 ... exact \u000B9 ... 30 days \u000B10 ... 60 days \u000B11 ... 90 days \u000B12 ... 120 days \u000B13 ... consolidated \u000B30 ... provisional", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                                }
+                                                            ]
+                                                        }, {
+                                                            "text": "COMMENT"
+                                                        }
+                                                    ]
+                                                }, {
+                                                    "text": "DATE"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "CUSTOMERSPECIFICMAXCREDITS",
+                                    "nodes": [{
+                                            "text": "CUSTOMERSPECIFICMAXCREDIT",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "CSMAXCREDITVALUE"
+                                                }, {
+                                                    "text": "CSMAXCREDITCURRENCY",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "CSMAXCREDITCODE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "CCEATRATING",
+                                    "tags": ["Coface Central Europe's @rating score for the company.   "],
+                                    "nodes": [{
+                                            "text": "SCORE",
+                                            "tags": ["Risk score:\u000B1=Risk of insolvency\u000B2=Very high risk\u000B3=High risk\u000B4=Above medium risk\u000B5=Medium risk\u000B6=Less than medium risk\u000B7=Low risk\u000B8=Very low risk\u000B9=Excellent/almost no risk\u000B10=No risk\u000B99=Not available", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "DATE"
+                                        }, {
+                                            "text": "PD",
+                                            "tags": ["Probability of default within the next 12 months, expressed as a number between 0 and 1. This value is not always calculated and shown."]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }, {
+                                            "text": "CONTRIBUTION"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "HISTORICALCCEATRATINGS",
+                                    "tags": ["Historical Coface Central Europe @ratings for the company. "],
+                                    "nodes": [{
+                                            "text": "HISTORICALCCEATRATING",
+                                            "nodes": [{
+                                                    "text": "SCORE",
+                                                    "tags": ["Risk score:\u000B1=Risk of insolvency\u000B2=Very high risk\u000B3=High risk\u000B4=Above medium risk\u000B5=Medium risk\u000B6=Less than medium risk\u000B7=Low risk\u000B8=Very low risk\u000B9=Excellent/almost no risk\u000B10=No risk\u000B99=Not available", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DATE"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "FINANCIALSOURCES",
+                                    "nodes": [{
+                                            "text": "FINANCIALSOURCE",
+                                            "nodes": [{
+                                                    "text": "SOURCETYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "DATE"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "AUDITS",
+                                    "tags": ["Details of known company audits. "],
+                                    "nodes": [{
+                                            "text": "AUDIT",
+                                            "nodes": [{
+                                                    "text": "DATE"
+                                                }, {
+                                                    "text": "AUDITORPERSONNAME"
+                                                }, {
+                                                    "text": "AUDITORCOMPANYNAME"
+                                                }, {
+                                                    "text": "AUDITORCOMPANYADDRESS"
+                                                }, {
+                                                    "text": "AUDITSTATUS"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "COMMENT"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "STATUSLIST",
+                                    "nodes": [{
+                                            "text": "COMPANYSTATUS",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "STATUS",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "VALIDSINCE"
+                                                }, {
+                                                    "text": "COMMENT"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "COMPANYHISTORY",
+                                    "nodes": [{
+                                            "text": "FORMERCOMPANYNAME",
+                                            "nodes": [{
+                                                    "text": "NAME",
+                                                    "tags": ["Name"]
+                                                }, {
+                                                    "text": "VALIDSINCE"
+                                                }, {
+                                                    "text": "VALIDUNTIL"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "FORMERADDRESS",
+                                            "nodes": [{
+                                                    "text": "VALIDSINCE"
+                                                }, {
+                                                    "text": "VALIDUNTIL"
+                                                }, {
+                                                    "text": "ADDRESSTYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "RUNNINGNUMBER"
+                                                }, {
+                                                    "text": "NAME",
+                                                    "tags": ["Name"]
+                                                }, {
+                                                    "text": "STREET",
+                                                    "tags": ["Street"]
+                                                }, {
+                                                    "text": "HOUSENUMBER",
+                                                    "tags": ["House number"]
+                                                }, {
+                                                    "text": "ADDITIONALADDRESSLINE"
+                                                }, {
+                                                    "text": "ZIPCODE",
+                                                    "tags": ["Zip code"]
+                                                }, {
+                                                    "text": "CITY",
+                                                    "tags": ["City"]
+                                                }, {
+                                                    "text": "COUNTRY",
+                                                    "tags": ["Country", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "COUNTRYREGION",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "TELEPHONE",
+                                                    "nodes": [{
+                                                            "text": "INTERNATIONAL"
+                                                        }, {
+                                                            "text": "AREA"
+                                                        }, {
+                                                            "text": "NUMBER"
+                                                        }
+                                                    ]
+                                                }, {
+                                                    "text": "FAX",
+                                                    "nodes": [{
+                                                            "text": "INTERNATIONAL"
+                                                        }, {
+                                                            "text": "AREA"
+                                                        }, {
+                                                            "text": "NUMBER"
+                                                        }
+                                                    ]
+                                                }, {
+                                                    "text": "EMAIL"
+                                                }, {
+                                                    "text": "INTERNET"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "FORMERREGISTRATION",
+                                            "nodes": [{
+                                                    "text": "NUMBER"
+                                                }, {
+                                                    "text": "DATE"
+                                                }, {
+                                                    "text": "PROTOCOLPLACE"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "FORMERLEGALFORM",
+                                            "nodes": [{
+                                                    "text": "LEGALFORM",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "VALIDSINCE"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "MAJORSUPPLIERS",
+                                    "nodes": [{
+                                            "text": "MAJORSUPPLIER",
+                                            "nodes": [{
+                                                    "text": "NAME",
+                                                    "tags": ["Name"]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "MAJORCUSTOMERS",
+                                    "nodes": [{
+                                            "text": "MAJORCUSTOMER",
+                                            "nodes": [{
+                                                    "text": "NAME",
+                                                    "tags": ["Name"]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "COUNTRYINDICATORS",
+                                    "tags": ["Statistics of country-wide and/or branch-wide financial indicators that can be used to compare the company's financials to company and/or industry standards. "]
+                                }, {
+                                    "text": "EXTERNALDEBTS",
+                                    "nodes": [{
+                                            "text": "EXTERNALDEBT",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "FROMDATE",
+                                                    "tags": ["Generally unused. Refer to DATE. If used, then it refers to the start date of the period in which the financial indicator value is relevant."]
+                                                }, {
+                                                    "text": "TODATE",
+                                                    "tags": ["Generally unused. Refer to DATE. If used, then it refers to the end date of the period in which the financial indicator value is relevant."]
+                                                }, {
+                                                    "text": "AMOUNT",
+                                                    "tags": ["Amount of the unpaid invoice."]
+                                                }, {
+                                                    "text": "CURRENCY",
+                                                    "tags": ["Iso code of the currency", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "ADDITIONALTEXTINFORMATIONS",
+                                    "nodes": [{
+                                            "text": "ADDITIONALTEXTINFORMATIONITEM",
+                                            "nodes": [{
+                                                    "text": "TYPE",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }, {
+                                                    "text": "TEXT",
+                                                    "tags": ["ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, {
+                                    "text": "SECTORSCORE",
+                                    "nodes": [{
+                                            "text": "ACTIVITY",
+                                            "nodes": [{
+                                                    "text": "PRIORITY"
+                                                }, {
+                                                    "text": "NACECODE"
+                                                }, {
+                                                    "text": "NACETEXT"
+                                                }, {
+                                                    "text": "LOCALACTIVITYCODE"
+                                                }, {
+                                                    "text": "LOCALACTIVITYTEXT"
+                                                }
+                                            ]
+                                        }, {
+                                            "text": "DATE"
+                                        }, {
+                                            "text": "SCORE",
+                                            "tags": ["Risk score:\u000B1=Risk of insolvency\u000B2=Very high risk\u000B3=High risk\u000B4=Above medium risk\u000B5=Medium risk\u000B6=Less than medium risk\u000B7=Low risk\u000B8=Very low risk\u000B9=Excellent/almost no risk\u000B10=No risk\u000B99=Not available", "ATTRIBUTE 'VALUE' : Internal id into the Coface referential"]
+                                        }, {
+                                            "text": "COMPANYPERCENTINSOLVENT"
+                                        }, {
+                                            "text": "COMPANYPERCENTHIGHRISK"
+                                        }, {
+                                            "text": "COMPANYPERCENTMEDIUMRISK"
+                                        }, {
+                                            "text": "COMPANYPERCENTLOWRISK"
+                                        }
+                                    ]
+                                }, {
+                                    "text": "UNSTRUCTURED"
+                                }
+                            ]
+                        }
+                    ]
+                };
+                return report;
+            }
+		</script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-2 bg-icon">
+					<div class="row">
+						<img src="https://raw.githubusercontent.com/coface/business-information-api/master/icon-logo.png" alt="Icon by Coface" class="img-fluid" style="max-height:100px" />
+					</div>
+				</div>
+				<div class="col-10 text-center"><h1 id="introduction">ICON Full Report</h1></div>
+			</div>
+			<div class="row">
+				<div class="col-2 bg-icon">
+					<div class="sidebar-item">
+						<div class="sticky-bar">
+							<a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/documentation.html" class="nav-link align-middle"><span>Report API Documentation</span></a>
+							<a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/faq.html" class="nav-link align-middle"><span>FAQ</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-10">
+					<div class="content-section">
+						<div id="introduction" class="text-justify">					
+							<p>The Full report is a product delivered by <a target="_blank" href="https://information.coface.com/en-gb/api-solutions">ICON, Coface Business Information offer</a>.</p>
+							<p>The Full report gives you a comprehensive and in-depth information of your business partners. Combined with the unique Coface Insurance payment experience, it is the perfect product for your credit and risk management. Full reports are available in all 195 countries, with an instant delivery or within an optimized respond time from 1 to 9 days depending on countries selected</p>						
+							<p>Need more more details ? Feel free to contact <a href="mailto:amandine.tridou-ext@coface.com">our support teams</a></p>
+						</div>
+						<div id="treeXML">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Icon Report API - Debtor Risk Assessment Report Content</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="icon" href="https://raw.githubusercontent.com/coface/business-information-api/master/icon-logo.png">
+		<style>
+			.bg-icon {
+				background-color: #14375c;
+			}
+			h1, h2 {
+				color: #14375c;
+			}
+			.sticky-bar a {
+				color: white;
+			}
+			.sticky-bar a:hover {
+				background-color: #386ea8;
+			}
+			.sidebar-section {
+			  position: absolute;
+			  height: 100%;
+			  width: 100%;
+			}
+
+			.sidebar-item {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.sticky-bar {
+			  position: -webkit-sticky;
+				position: sticky;
+				top: 0;
+				padding: 0 15px;
+			}
+		</style>
+		<script type="text/javascript">
+			var scripts = [
+				{src:'https://code.jquery.com/jquery-3.6.0.min.js'},
+				{src:'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js'},
+				{src:'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js'}];
+
+			window.onload = function() {
+				loadScript(0);
+			};
+				
+			function loadScript(index) {
+				if (scripts[index]) { 
+					var script = document.createElement('script');
+					script.type = "text/javascript";
+					script.src = scripts[index].src;
+					script.crossOrigin = 'anonymous';	
+					document.getElementsByTagName('head')[0].appendChild(script);
+					script.onload = function() {
+						loadScript(index + 1);
+						if (index == 2) {
+							<!-- $('#treeXML').treeview({ -->
+								<!-- data: getXMLSnapshot(), -->
+								<!-- collapseIcon:"fa fa-minus", -->
+								<!-- expandIcon:"fa fa-plus", -->
+								<!-- highlightSelected: false, -->
+								<!-- showTags: true -->
+							<!-- }); -->
+						}
+					};
+				}
+			}
+
+			function getXMLSnapshot() {
+				return [{
+						text:"ICON (Attribut : VERSION)",
+						tag:"This is the root node of the entire XML document. (VERSION : Indicates the version of the ICON XML that created the report.)",
+						tags:["(VERSION : Indicates the version of the ICON XML that created the report.)", "This is the root node of the entire XML document.", "This is <br/>the root node of the entire XML document.", "This is the root node of the entire XML document.", "This is the root node of the entire XML document."],
+						title:"This is the root node of the entire XML document. (VERSION : Indicates the version of the ICON XML that created the report.)3",
+						nodes: [{
+								text:"ORDERSTATUS",
+								title:"Information concerning the status of the order and details reminding of the original request for research.",
+								}
+								]
+				}];
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-2 bg-icon">
+					<div class="row">
+						<img src="https://raw.githubusercontent.com/coface/business-information-api/master/icon-logo.png" alt="Icon by Coface" class="img-fluid" style="max-height:100px" />
+					</div>
+				</div>
+				<div class="col-10 text-center"><h1 id="introduction">ICON Credit report</h1></div>
+			</div>
+			<div class="row">
+				<div class="col-2 bg-icon">
+					<div class="sidebar-item">
+						<div class="sticky-bar">
+							<a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/documentation.html" class="nav-link align-middle"><span>Report API Documentation</span></a>
+							<a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/faq.html" class="nav-link align-middle"><span>FAQ</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-10">
+					<div class="content-section">
+						<div id="introduction" class="text-justify">					
+							<p>The Debtor Risk Assessment is a product delivered by <a target="_blank" href="https://information.coface.com/en-gb/api-solutions">ICON, Coface Business Information offer</a>.</p>
+							<p>The Debtor Risk Assessment is the likelihood over a period of 12 months, that a company will be able to honor its financial commitments such as counterparty obligations. It is calculated on the basis of both, typical financial attributes such as financial soundness, profitability, Coface payment experience and claims, solvency ratios as well as qualitative data as the company's business environment and management</p>						
+							<p>Need more more details ? Feel free to contact <a href="mailto:amandine.tridou-ext@coface.com">our support teams</a></p>
+						</div>
+						<div id="treeXML">In progress...
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

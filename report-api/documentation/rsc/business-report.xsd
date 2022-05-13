@@ -1,0 +1,3695 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--W3C Schema généré par XMLSpy v2022 rel. 2 (x64) (http://www.altova.com)-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="ICON">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice minOccurs="0">
+					<xs:element ref="ORDERSTATUSREQUEST" minOccurs="0"/>
+					<xs:element ref="INQUIRY" minOccurs="0"/>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element ref="ORDERSTATUS"/>
+						<xs:element ref="CREDITREPORT" minOccurs="0"/>
+						<xs:element ref="CREDITSCORING" minOccurs="0"/>
+						<xs:element ref="NOTIFICATION" minOccurs="0"/>
+					</xs:sequence>
+					<xs:element ref="SEARCH" minOccurs="0"/>
+					<xs:element ref="SEARCHRESULTS" minOccurs="0"/>
+					<xs:element ref="CREICA" minOccurs="0"/>
+					<xs:element ref="COMPANYFINANCIALS" minOccurs="0"/>
+				</xs:choice>
+				<xs:element ref="ERROR" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="VERSION" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ORDERSTATUS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INTERCREDITORDERNUMBER"/>
+				<xs:element ref="PROVIDER"/>
+				<xs:element ref="CUSTOMER"/>
+				<xs:element ref="CUSTOMERSREFERENCE"/>
+				<xs:element ref="PURCHASEORDERNUMBER"/>
+				<xs:element ref="LANGUAGE"/>
+				<xs:element ref="PRODUCT"/>
+				<xs:element ref="REPORTMIMETYPE"/>
+				<xs:element ref="BALANCESHEETLAYOUT" minOccurs="0"/>
+				<xs:element ref="TIMESTAMP"/>
+				<xs:element ref="STATUS"/>
+				<xs:element ref="REQUIREDBY"/>
+				<xs:element ref="GIVENCOMPANYNAME"/>
+				<xs:element ref="REQUESTEDCOMPANYINFORMATION" minOccurs="0"/>
+				<xs:element ref="QUESTION"/>
+				<xs:element ref="ANSWER"/>
+				<xs:element ref="NEGATIVE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INTERCREDITORDERNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PROVIDER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PROVIDERID"/>
+				<xs:element ref="NAME"/>
+				<xs:element ref="SENDERID"/>
+				<xs:element ref="CITY"/>
+				<xs:element ref="COUNTRY"/>
+				<xs:element ref="STREET"/>
+				<xs:element ref="HOUSENUMBER"/>
+				<xs:element ref="ZIPCODE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PROVIDERID">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CUSTOMERID">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CUSTOMERNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CUSTOMERSREFERENCE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PURCHASEORDERNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="LANGUAGE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BALANCESHEETLAYOUT">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TIMESTAMP">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="STATUS">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REQUIREDBY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PRICE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GIVENCOMPANYNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="QUESTION">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ANSWER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CREDITREPORT">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="CREICA"/>
+				<xs:sequence>
+					<xs:element ref="COMPANY" minOccurs="0"/>
+					<xs:element ref="SHAREHOLDERS" minOccurs="0"/>
+					<xs:element ref="FORMERSHAREHOLDERS" minOccurs="0"/>
+					<xs:element ref="ULTIMATEBENEFICIALOWNERS" minOccurs="0"/>
+					<xs:element ref="AUDITORS" minOccurs="0"/>
+					<xs:element ref="MANAGEMENT" minOccurs="0"/>
+					<xs:element ref="PERSONFUNCTIONSINOTHERCOMPANIES" minOccurs="0"/>
+					<xs:element ref="AUTHORITY" minOccurs="0"/>
+					<xs:element ref="ACTIVITIES" minOccurs="0"/>
+					<xs:element ref="IMPORTS" minOccurs="0"/>
+					<xs:element ref="EXPORTS" minOccurs="0"/>
+					<xs:element ref="KEYDATA" minOccurs="0"/>
+					<xs:element ref="CALCULATEDKEYDATAINFO" minOccurs="0"/>
+					<xs:element ref="BALANCESHEET" minOccurs="0"/>
+					<xs:element ref="CONSOLIDATEDBALANCESHEET" minOccurs="0"/>
+					<xs:element ref="ADDITIONALBALANCESHEETS" minOccurs="0"/>
+					<xs:element ref="BALANCESHEETPUBLICATIONS" minOccurs="0"/>
+					<xs:element ref="SHAREHOLDERFINANCIALS" minOccurs="0"/>
+					<xs:element ref="RELATEDCOMPANIESFINANCIALS" minOccurs="0"/>
+					<xs:element ref="RATIOS" minOccurs="0"/>
+					<xs:element ref="BRANCHRATIOS" minOccurs="0"/>
+					<xs:element ref="WORKFORCE" minOccurs="0"/>
+					<xs:element ref="TRADEHISTORY" minOccurs="0"/>
+					<xs:element ref="INVENTORY" minOccurs="0"/>
+					<xs:element ref="TURNOVER" minOccurs="0"/>
+					<xs:element ref="LIABILITIES" minOccurs="0"/>
+					<xs:element ref="CLAIMSRECEIVEABLE" minOccurs="0"/>
+					<xs:element ref="VEHICLES" minOccurs="0"/>
+					<xs:element ref="MOTORVEHICLES" minOccurs="0"/>
+					<xs:element ref="REALESTATES" minOccurs="0"/>
+					<xs:element ref="LINKEDCOMPANIES" minOccurs="0"/>
+					<xs:element ref="FUNCTIONARYCOMPANIES" minOccurs="0"/>
+					<xs:element ref="BANKCONNECTIONS" minOccurs="0"/>
+					<xs:element ref="BANKCONFIRMATIONS" minOccurs="0"/>
+					<xs:element ref="SHARECAPITAL" minOccurs="0"/>
+					<xs:element ref="DATES" minOccurs="0"/>
+					<xs:element ref="ADDITIONALINFORMATION" minOccurs="0"/>
+					<xs:element ref="ADDITIONALCOMMENTS" minOccurs="0"/>
+					<xs:element ref="BUSINESSTRENDS" minOccurs="0"/>
+					<xs:element ref="COMPANYDEVELOPMENT" minOccurs="0"/>
+					<xs:element ref="RESEARCH" minOccurs="0"/>
+					<xs:element ref="PAYMENTS" minOccurs="0"/>
+					<xs:element ref="PAYMENTINDEX" minOccurs="0"/>
+					<xs:element ref="PAYMENTINCIDENTAMOUNTS" minOccurs="0"/>
+					<xs:element ref="PAYMENTINCIDENTCASES" minOccurs="0"/>
+					<xs:element ref="PAYMENTREFERENCES" minOccurs="0"/>
+					<xs:element ref="PAYMENTMORALITYINDEX" minOccurs="0"/>
+					<xs:element ref="PAYMENTMORALITYINDEXHISTORY" minOccurs="0"/>
+					<xs:element ref="DAYSPAYABLEOUTSTANDING" minOccurs="0"/>
+					<xs:element ref="ASSESSMENT" minOccurs="0"/>
+					<xs:element ref="LITIGATIONS" minOccurs="0" maxOccurs="2"/>
+					<xs:element ref="LITIGATIONSUMMARYS" minOccurs="0"/>
+					<xs:element ref="NATUREOFBUSINESS" minOccurs="0"/>
+					<xs:element ref="CHARGES" minOccurs="0"/>
+					<xs:element ref="CREDITREQUESTED" minOccurs="0"/>
+					<xs:element ref="STATUSOFCOMPANY" minOccurs="0"/>
+					<xs:element ref="PROFITABILITY" minOccurs="0"/>
+					<xs:element ref="FINANCIALSITUATION" minOccurs="0"/>
+					<xs:element ref="CONTACTINFORMATIONS" minOccurs="0"/>
+					<xs:element ref="INSOLVENCY" minOccurs="0"/>
+					<xs:element ref="ADDITIONALINSOLVENCYLIST" minOccurs="0"/>
+					<xs:element ref="RATINGTEXTS" minOccurs="0"/>
+					<xs:element ref="DEBTCOLLECTION" minOccurs="0"/>
+					<xs:element ref="MAXIMUMCREDIT" minOccurs="0"/>
+					<xs:element ref="MAXIMUMCREDITHISTORY" minOccurs="0"/>
+					<xs:element ref="PAYMENTINDEXHISTORY" minOccurs="0"/>
+					<xs:element ref="CUSTOMERSPECIFICMAXCREDITS" minOccurs="0"/>
+					<xs:element ref="CCEATRATING" minOccurs="0"/>
+					<xs:element ref="HISTORICALCCEATRATINGS" minOccurs="0"/>
+					<xs:element ref="FINANCIALSOURCES" minOccurs="0"/>
+					<xs:element ref="AUDITS" minOccurs="0"/>
+					<xs:element ref="STATUSLIST" minOccurs="0"/>
+					<xs:element ref="COMPANYHISTORY" minOccurs="0"/>
+					<xs:element ref="MAJORSUPPLIERS" minOccurs="0"/>
+					<xs:element ref="MAJORCUSTOMERS" minOccurs="0"/>
+					<xs:element ref="EUROGATERISKCLASS" minOccurs="0"/>
+					<xs:element ref="FINANCIALS" minOccurs="0"/>
+					<xs:element ref="EXECUTIONS" minOccurs="0"/>
+					<xs:element ref="NEGATIVEINFORMATION" minOccurs="0"/>
+					<xs:element ref="COUNTRYINDICATORS" minOccurs="0"/>
+					<xs:element ref="EXTERNALDEBTS" minOccurs="0"/>
+					<xs:element ref="FAMILYTREE" minOccurs="0"/>
+					<xs:element ref="DCLINSURANCE" minOccurs="0"/>
+					<xs:element ref="ADDITIONALTEXTINFORMATIONS" minOccurs="0"/>
+					<xs:element ref="CCEATRATING" minOccurs="0"/>
+					<xs:element ref="SECTORSCORE" minOccurs="0"/>
+					<xs:element ref="UNSTRUCTURED" minOccurs="0"/>
+					<xs:element ref="SCORINGELEMENTS" minOccurs="0"/>
+				</xs:sequence>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COMPANY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COPYRIGHT"/>
+				<xs:element ref="INTERCREDITNUMBER"/>
+				<xs:element ref="NATIONALID"/>
+				<xs:element ref="STATUS"/>
+				<xs:element ref="COMPANYNAME"/>
+				<xs:element ref="SORTNAME"/>
+				<xs:element ref="INTERNATIONALNAME"/>
+				<xs:element ref="EASYNUMBER" minOccurs="0"/>
+				<xs:element ref="SHORTNAME" minOccurs="0"/>
+				<xs:element ref="LEGALFORM"/>
+				<xs:element ref="LEGALFORMSUBTYPE" minOccurs="0"/>
+				<xs:element ref="REGISTRATION"/>
+				<xs:element ref="COMPANYCOMMENT"/>
+				<xs:element ref="HISTORY"/>
+				<xs:element ref="TAXNUMBER"/>
+				<xs:element ref="STATISTICALNUMBER"/>
+				<xs:element ref="VATNUMBER"/>
+				<xs:element ref="VALIDITYDATE"/>
+				<xs:element ref="LASTMAJORUPDATE" minOccurs="0"/>
+				<xs:element ref="ESTABLISHED"/>
+				<xs:element ref="CAPITAL"/>
+				<xs:element ref="NATIONALCURRENCY"/>
+				<xs:element ref="ANNUALRETURNDATE" minOccurs="0"/>
+				<xs:element ref="ANNUALRETURNFILEDON" minOccurs="0"/>
+				<xs:element ref="ALIASES"/>
+				<xs:element ref="ADDRESSES"/>
+				<xs:element ref="PRIMARYNATIONALIDENTIFIER" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COPYRIGHT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="INTERCREDITNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NATIONALID">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SORTNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="INTERNATIONALNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EASYNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SHORTNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="LEGALFORM">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LEGALFORMSUBTYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REGISTRATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NUMBER" minOccurs="0"/>
+				<xs:element ref="CITY" minOccurs="0"/>
+				<xs:element ref="COUNTRY" minOccurs="0"/>
+				<xs:element ref="COUNTRYREGION" minOccurs="0"/>
+				<xs:element ref="DATE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CITY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COUNTRY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COUNTRYREGION">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COUNTRYLIST">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="THREEDIGITSCORE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMMENT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISPERSON">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="HISTORY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="TAXNUMBER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE" minOccurs="0"/>
+				<xs:element ref="VALUE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VALUE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SUBTYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VATNUMBER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE" minOccurs="0"/>
+				<xs:element ref="VALUE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VALIDITYDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="LASTMAJORUPDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ESTABLISHED">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CAPITAL">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FROMAMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="TOAMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DIMENSION">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MEASURE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LABELTYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="OUTLINENUMBER"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PARTIALBALANCESHEET">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ALIASES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ALIAS" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ALIAS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ANNUALRETURNDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ANNUALRETURNFILEDON">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ADDRESS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ADDRESSTYPE"/>
+				<xs:element ref="RUNNINGNUMBER"/>
+				<xs:element ref="NAME" minOccurs="0"/>
+				<xs:element ref="STREET"/>
+				<xs:element ref="HOUSENUMBER"/>
+				<xs:element ref="ADDITIONALADDRESSLINE" minOccurs="0"/>
+				<xs:element ref="ZIPCODE"/>
+				<xs:element ref="CITY"/>
+				<xs:element ref="COUNTRY"/>
+				<xs:element ref="COUNTRYREGION" minOccurs="0"/>
+				<xs:element ref="COUNTY" minOccurs="0"/>
+				<xs:element ref="COMMUNITY" minOccurs="0"/>
+				<xs:element ref="POST" minOccurs="0"/>
+				<xs:element ref="TELEPHONE" maxOccurs="unbounded"/>
+				<xs:element ref="FAX" maxOccurs="unbounded"/>
+				<xs:element ref="EMAIL"/>
+				<xs:element ref="INTERNET"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADDRESSTYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RUNNINGNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="STREET">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="HOUSENUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ADDITIONALADDRESSLINE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COUNTY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMMUNITY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="POST">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ZIPCODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="TELEPHONE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INTERNATIONAL"/>
+				<xs:element ref="AREA"/>
+				<xs:element ref="NUMBER"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AREA">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="FAX">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INTERNATIONAL"/>
+				<xs:element ref="AREA"/>
+				<xs:element ref="NUMBER"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SHAREHOLDERFINANCIALS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SHAREHOLDERS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SHAREHOLDERS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SHAREHOLDER" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FORMERSHAREHOLDERS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SHAREHOLDER" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SHAREHOLDER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="SUBTYPE" minOccurs="0"/>
+				<xs:element ref="NAME"/>
+				<xs:element ref="ADDRESS" minOccurs="0"/>
+				<xs:element ref="ACTIVESINCE"/>
+				<xs:element ref="ACTIVEUNTIL"/>
+				<xs:element ref="EQUITYAMOUNT"/>
+				<xs:element ref="EQUITYCURRENCY"/>
+				<xs:element ref="EQUITYDIMENSION"/>
+				<xs:element ref="ISPERSON" minOccurs="0"/>
+				<xs:element ref="INTERCREDITNUMBER" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONCOUNTRY" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONPLACE" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONDATE" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONNUMBER" minOccurs="0"/>
+				<xs:element ref="SHARES1_NUMBER" minOccurs="0"/>
+				<xs:element ref="SHARES1_CLASS" minOccurs="0"/>
+				<xs:element ref="SHARES2_NUMBER" minOccurs="0"/>
+				<xs:element ref="SHARES2_CLASS" minOccurs="0"/>
+				<xs:element ref="SHARES3_NUMBER" minOccurs="0"/>
+				<xs:element ref="SHARES3_CLASS" minOccurs="0"/>
+				<xs:element ref="COMPANYSTATUS" minOccurs="0"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+				<xs:element ref="BALANCESHEET" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ACTIVESINCE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ACTIVEUNTIL">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EQUITYAMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EQUITYCURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EQUITYDIMENSION">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REGISTRATIONPLACE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="REGISTRATIONDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="REGISTRATIONNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SHARES1_NUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SHARES1_CLASS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SHARES2_NUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SHARES2_CLASS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SHARES3_NUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SHARES3_CLASS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ULTIMATEBENEFICIALOWNERS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MANAGER" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AUDITORS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MANAGER" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MANAGEMENT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MANAGER" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENTS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MANAGER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="SUBTYPE" minOccurs="0"/>
+				<xs:element ref="NAME"/>
+				<xs:element ref="ADDRESS" minOccurs="0"/>
+				<xs:element ref="ACTIVESINCE"/>
+				<xs:element ref="ACTIVEUNTIL"/>
+				<xs:element ref="EQUITYAMOUNT"/>
+				<xs:element ref="EQUITYCURRENCY"/>
+				<xs:element ref="EQUITYDIMENSION"/>
+				<xs:element ref="ISPERSON" minOccurs="0"/>
+				<xs:element ref="INTERCREDITNUMBER" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONCOUNTRY" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONPLACE" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONDATE" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONNUMBER" minOccurs="0"/>
+				<xs:element ref="SHARES1_NUMBER" minOccurs="0"/>
+				<xs:element ref="SHARES1_CLASS" minOccurs="0"/>
+				<xs:element ref="SHARES2_NUMBER" minOccurs="0"/>
+				<xs:element ref="SHARES2_CLASS" minOccurs="0"/>
+				<xs:element ref="SHARES3_NUMBER" minOccurs="0"/>
+				<xs:element ref="SHARES3_CLASS" minOccurs="0"/>
+				<xs:element ref="COMPANYSTATUS" minOccurs="0"/>
+				<xs:element ref="EASYNUMBER" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONNUMBER" minOccurs="0"/>
+				<xs:element ref="PERSONNUMBER" minOccurs="0"/>
+				<xs:element ref="PID" minOccurs="0"/>
+				<xs:element ref="COUNTRY" minOccurs="0"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PERSONNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PID">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="FUNCTIONARYCOMPANIES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FUNCTIONARYCOMPANY" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FUNCTIONARYCOMPANY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="SUBTYPE" minOccurs="0"/>
+				<xs:element ref="NAME"/>
+				<xs:element ref="ADDRESS" minOccurs="0"/>
+				<xs:element ref="ACTIVESINCE"/>
+				<xs:element ref="ACTIVEUNTIL"/>
+				<xs:element ref="EQUITYAMOUNT"/>
+				<xs:element ref="EQUITYCURRENCY"/>
+				<xs:element ref="EQUITYDIMENSION"/>
+				<xs:element ref="INTERCREDITNUMBER" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONCOUNTRY" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONPLACE" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONDATE" minOccurs="0"/>
+				<xs:element ref="REGISTRATIONNUMBER" minOccurs="0"/>
+				<xs:element ref="COMPANYSTATUS" minOccurs="0"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PERSONFUNCTIONSINOTHERCOMPANIES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PERSONFUNCTIONS" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PERSONFUNCTIONS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NAME"/>
+				<xs:element ref="FUNCTION" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FUNCTION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="POSITION" minOccurs="0"/>
+				<xs:element ref="FUNCTIONCOMPANY" minOccurs="0"/>
+				<xs:element ref="COUNTRY" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="POSITION">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="FUNCTIONCOMPANY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="INTERCREDITNUMBER"/>
+			<xs:attribute name="NATIONALID"/>
+			<xs:attribute name="VATNUMBER"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COMMENTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COMMENT" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ACTIVITIES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ACTIVITY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ACTIVITY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PRIORITY"/>
+				<xs:element ref="NACECODE"/>
+				<xs:element ref="NACETEXT"/>
+				<xs:element ref="LOCALACTIVITYCODE" minOccurs="0"/>
+				<xs:element ref="LOCALACTIVITYTEXT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LOCALACTIVITYCODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="LOCALACTIVITYTEXT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PRIORITY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NACECODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NACETEXT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="IMPORTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="GENERALPAYMENTTERMS1" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTDAYS1" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTTERMS2" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTDAYS2" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTTERMS3" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTDAYS3" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTTERMS4" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTDAYS4" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTTERMS5" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTDAYS5" minOccurs="0"/>
+				<xs:element ref="IMPORT" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IMPORT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DATE"/>
+				<xs:element ref="AMOUNT"/>
+				<xs:element ref="CURRENCY"/>
+				<xs:element ref="DIMENSION"/>
+				<xs:element ref="COUNTRY" minOccurs="0"/>
+				<xs:element ref="COUNTRYLIST" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMS1" minOccurs="0"/>
+				<xs:element ref="PAYMENTDAYS1" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT1" minOccurs="0"/>
+				<xs:element ref="TERMSQUALIFIER1" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMS2" minOccurs="0"/>
+				<xs:element ref="PAYMENTDAYS2" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT2" minOccurs="0"/>
+				<xs:element ref="TERMSQUALIFIER2" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMS3" minOccurs="0"/>
+				<xs:element ref="PAYMENTDAYS3" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT3" minOccurs="0"/>
+				<xs:element ref="TERMSQUALIFIER3" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMS4" minOccurs="0"/>
+				<xs:element ref="PAYMENTDAYS4" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT4" minOccurs="0"/>
+				<xs:element ref="TERMSQUALIFIER4" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMS5" minOccurs="0"/>
+				<xs:element ref="PAYMENTDAYS5" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT5" minOccurs="0"/>
+				<xs:element ref="TERMSQUALIFIER5" minOccurs="0"/>
+				<xs:element ref="RETAIL" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EXPORTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="GENERALPAYMENTTERMS1" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTDAYS1" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTTERMS2" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTDAYS2" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTTERMS3" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTDAYS3" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTTERMS4" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTDAYS4" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTTERMS5" minOccurs="0"/>
+				<xs:element ref="GENERALPAYMENTDAYS5" minOccurs="0"/>
+				<xs:element ref="EXPORT" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EXPORT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DATE"/>
+				<xs:element ref="AMOUNT"/>
+				<xs:element ref="CURRENCY"/>
+				<xs:element ref="DIMENSION"/>
+				<xs:element ref="COUNTRY" minOccurs="0"/>
+				<xs:element ref="COUNTRYLIST" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMS1" minOccurs="0"/>
+				<xs:element ref="PAYMENTDAYS1" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT1" minOccurs="0"/>
+				<xs:element ref="TERMSQUALIFIER1" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMS2" minOccurs="0"/>
+				<xs:element ref="PAYMENTDAYS2" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT2" minOccurs="0"/>
+				<xs:element ref="TERMSQUALIFIER2" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMS3" minOccurs="0"/>
+				<xs:element ref="PAYMENTDAYS3" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT3" minOccurs="0"/>
+				<xs:element ref="TERMSQUALIFIER3" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMS4" minOccurs="0"/>
+				<xs:element ref="PAYMENTDAYS4" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT4" minOccurs="0"/>
+				<xs:element ref="TERMSQUALIFIER4" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMS5" minOccurs="0"/>
+				<xs:element ref="PAYMENTDAYS5" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT5" minOccurs="0"/>
+				<xs:element ref="TERMSQUALIFIER5" minOccurs="0"/>
+				<xs:element ref="RETAIL" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BALANCESHEET">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BALANCESHEETITEM" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+				<xs:element ref="HISTORICALEXCHANGERATES" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CONSOLIDATEDBALANCESHEET">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BALANCESHEETITEM" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+				<xs:element ref="HISTORICALEXCHANGERATES" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INDICATOR">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="DATE"/>
+				<xs:element ref="FROMDATE" minOccurs="0"/>
+				<xs:element ref="TODATE" minOccurs="0"/>
+				<xs:element ref="FROMAMOUNT"/>
+				<xs:element ref="TOAMOUNT"/>
+				<xs:element ref="CURRENCY"/>
+				<xs:element ref="DIMENSION"/>
+				<xs:element ref="MEASURE"/>
+				<xs:element ref="LABELTYPE" minOccurs="0"/>
+				<xs:element ref="PARTIALBALANCESHEET" minOccurs="0"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HISTORICALEXCHANGERATES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RATE" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RATE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="YEAR"/>
+				<xs:element ref="EXCHANGERATE"/>
+			</xs:sequence>
+			<xs:attribute name="CURRENCY" use="required"/>
+			<xs:attribute name="REFERENCECURRENCY" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="YEAR">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EXCHANGERATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="WORKFORCE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TRADEHISTORY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INVENTORY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TURNOVER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LIABILITIES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CLAIMSRECEIVEABLE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VEHICLES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REALESTATES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="REALESTATE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REALESTATE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ADDRESS" minOccurs="0"/>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="SIZE"/>
+				<xs:element ref="SIZEDIMENSION"/>
+				<xs:element ref="VALUE"/>
+				<xs:element ref="VALUEDIMENSION"/>
+				<xs:element ref="VALUECURRENCY"/>
+				<xs:element ref="DEBT"/>
+				<xs:element ref="SHARE"/>
+				<xs:element ref="OWNERSHIP" minOccurs="0"/>
+				<xs:element ref="RENT" minOccurs="0"/>
+				<xs:element ref="AREACOMMENT" minOccurs="0"/>
+				<xs:element ref="CONDITION" minOccurs="0"/>
+				<xs:element ref="EQUIPMENT" minOccurs="0"/>
+				<xs:element ref="PREMISESSHARED" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SIZE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SIZEDIMENSION">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VALUEDIMENSION">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VALUECURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DEBT">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SHARE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="RENT">
+		<xs:complexType mixed="true">
+			<xs:attribute name="CURRENCY" use="required"/>
+			<xs:attribute name="PAYMENTPER" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AREACOMMENT">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CONDITION">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EQUIPMENT">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PREMISESSHARED">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LINKEDCOMPANIES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LINKEDCOMPANY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LINKEDCOMPANY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="NAME"/>
+				<xs:element ref="ADDRESS" minOccurs="0"/>
+				<xs:element ref="INTERCREDITNUMBER"/>
+				<xs:element ref="REGISTRATIONCOUNTRY"/>
+				<xs:element ref="INSOLVENCY" minOccurs="0"/>
+				<xs:element ref="COMPANYSTATUS" minOccurs="0"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REGISTRATIONCOUNTRY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BANKCONNECTIONS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BANKCONNECTION" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BANKCONNECTION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BANK"/>
+				<xs:element ref="LOCATED"/>
+				<xs:element ref="ACCOUNTNUMBER"/>
+				<xs:element ref="IBAN" minOccurs="0"/>
+				<xs:element ref="BIC" minOccurs="0"/>
+				<xs:element ref="ACCOUNTOPENEDDATE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BANK">
+		<xs:complexType mixed="true">
+			<xs:attribute name="INTERCREDITNUMBER" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LOCATED">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ACCOUNTNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="IBAN">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="BIC">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ACCOUNTOPENEDDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DATES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DATEITEM" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DATEITEM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="DATE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADDITIONALINFORMATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ADDITIONALINFORMATIONITEM" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADDITIONALINFORMATIONITEM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="VALUE"/>
+				<xs:element ref="TEXT" minOccurs="0"/>
+				<xs:element ref="COMMENTS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADDITIONALCOMMENTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ADDITIONALCOMMENTITEM" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADDITIONALCOMMENTITEM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="TEXT"/>
+				<xs:element ref="PARAMETER"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TEXT">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PARAMETER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="BUSINESSTRENDS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SOLVENCY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="TEXT"/>
+				<xs:element ref="TEXTCODE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COMPANYDEVELOPMENT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RESEARCH">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTAMOUNTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PAYMENTINCIDENTAMOUNT" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTAMOUNT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PAYMENTAMOUNTTYPE"/>
+				<xs:element ref="PAYMENTINCIDENTCATEGORY"/>
+				<xs:element ref="PAYMENTINCIDENTTYPE"/>
+				<xs:element ref="PAYMENTINCIDENTVALUE"/>
+				<xs:element ref="CURRENCY"/>
+				<xs:element ref="VALIDFROM"/>
+				<xs:element ref="VALIDTO"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTAMOUNTTYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTCATEGORY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTTYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTVALUE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="VALIDFROM">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="VALIDTO">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTCASES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PAYMENTINCIDENTCASE" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTCASE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PAYMENTINCIDENTTYPE"/>
+				<xs:element ref="PAYMENTINCIDENTCASEREGISTRATIONDATE"/>
+				<xs:element ref="PAYMENTINCIDENTCASEREFUSALREASON"/>
+				<xs:element ref="PAYMENTINCIDENTCASEINTERDICTIONPERIOD"/>
+				<xs:element ref="PAYMENTINCIDENTCASECATEGORY"/>
+				<xs:element ref="PAYMENTINCIDENTCASETOTALINSTRUMENTS"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTCASEREGISTRATIONDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTCASEREFUSALREASON">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTCASEINTERDICTIONPERIOD">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTCASECATEGORY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINCIDENTCASETOTALINSTRUMENTS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ASSESSMENT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INSOLVENCY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MAXIMUMCREDIT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINDEX">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MAXIMUMCREDITHISTORY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MAXIMUMCREDITENTRY" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MAXIMUMCREDITENTRY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MAXIMUMCREDIT"/>
+				<xs:element ref="DATE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTINDEXHISTORY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCYENTRY" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SOLVENCYENTRY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY"/>
+				<xs:element ref="DATE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CUSTOMERSPECIFICMAXCREDITS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CUSTOMERSPECIFICMAXCREDIT" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CUSTOMERSPECIFICMAXCREDIT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="CSMAXCREDITVALUE"/>
+				<xs:element ref="CSMAXCREDITCURRENCY"/>
+				<xs:element ref="CSMAXCREDITASSESSMENT" minOccurs="0"/>
+				<xs:element ref="CSMAXCREDITCODE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CSMAXCREDITVALUE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CSMAXCREDITCURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CSMAXCREDITASSESSMENT">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CSMAXCREDITCODE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INQUIRY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COMPANYUSERID"/>
+				<xs:element ref="COMPANYPASSWORD"/>
+				<xs:element ref="PERSONUSERID"/>
+				<xs:element ref="PERSONPASSWORD" minOccurs="0"/>
+				<xs:element ref="CUSTOMERSREFERENCE" minOccurs="0"/>
+				<xs:element ref="PURCHASEORDERNUMBER" minOccurs="0"/>
+				<xs:element ref="DELIVERYSPEED" minOccurs="0"/>
+				<xs:element ref="LANGUAGE" minOccurs="0"/>
+				<xs:element ref="QUESTION" minOccurs="0"/>
+				<xs:choice>
+					<xs:element ref="INTERCREDITNUMBER"/>
+					<xs:sequence>
+						<xs:choice>
+							<xs:element ref="COMPANYNAME"/>
+							<xs:element ref="NATIONALNUMBER"/>
+						</xs:choice>
+						<xs:element ref="REGISTRATIONCOUNTRY"/>
+					</xs:sequence>
+				</xs:choice>
+				<xs:element ref="ZIPCODE" minOccurs="0"/>
+				<xs:element ref="CITY" minOccurs="0"/>
+				<xs:element ref="STREET" minOccurs="0"/>
+				<xs:element ref="MAXCREDIT" minOccurs="0"/>
+				<xs:element ref="MAXCREDITCURRENCY" minOccurs="0"/>
+				<xs:element ref="PRODUCTNUMBER" minOccurs="0"/>
+				<xs:element ref="ORDERNEWRESEARCH" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COMPANYUSERID">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYPASSWORD">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PERSONUSERID">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PERSONPASSWORD">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DELIVERYSPEED">
+		<xs:complexType mixed="true">
+			<xs:attribute name="e-dtype" type="xs:NMTOKEN" fixed="string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ORDERSTATUSREQUEST">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COMPANYUSERID"/>
+				<xs:element ref="COMPANYPASSWORD"/>
+				<xs:element ref="PERSONUSERID"/>
+				<xs:element ref="PERSONPASSWORD" minOccurs="0"/>
+				<xs:element ref="INTERCREDITORDERNUMBER"/>
+				<xs:element ref="PROVIDERID"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ERROR">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NUMBER"/>
+				<xs:element ref="SOURCE"/>
+				<xs:element ref="DESCRIPTION"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SOURCE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DESCRIPTION">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NATIONALNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="MAXCREDIT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="MAXCREDITCURRENCY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EMAIL">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="INTERNET">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYCOMMENT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ADDRESSES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ADDRESS" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DCLINSURANCE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TEXT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UNSTRUCTURED">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="BALANCESHEETITEM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="TYPE"/>
+			<xs:attribute name="NAME"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NEGATIVE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="REASON"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+			<xs:attribute name="TYPE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REASON">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NATIONALCURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="STATISTICALNUMBER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE" minOccurs="0"/>
+				<xs:element ref="VALUE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SENDERID">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CUSTOMER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CUSTOMERID"/>
+				<xs:element ref="NAME"/>
+				<xs:element ref="RECIPIENTID"/>
+				<xs:element ref="CITY"/>
+				<xs:element ref="COUNTRY"/>
+				<xs:element ref="STREET"/>
+				<xs:element ref="HOUSENUMBER"/>
+				<xs:element ref="ZIPCODE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RECIPIENTID">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="REPORTMIMETYPE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CREICA">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="REQUESTEDCOMPANYINFORMATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COMPANYNAME"/>
+				<xs:element ref="REGISTRATIONCOUNTRY"/>
+				<xs:element ref="ZIPCODE"/>
+				<xs:element ref="CITY"/>
+				<xs:element ref="STREET"/>
+				<xs:element ref="HOUSENUMBER"/>
+				<xs:element ref="ADDITIONALADDRESSLINE"/>
+				<xs:element ref="COUNTRY"/>
+				<xs:element ref="TELEPHONAREACODE"/>
+				<xs:element ref="TELEPHONENUMBER"/>
+				<xs:element ref="NATIONALNUMBER"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TELEPHONAREACODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="TELEPHONENUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ADDITIONALINFORMATIONTYPE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCH">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COMPANYUSERID"/>
+				<xs:element ref="COMPANYPASSWORD"/>
+				<xs:element ref="PERSONUSERID"/>
+				<xs:element ref="PERSONPASSWORD" minOccurs="0"/>
+				<xs:element ref="SEARCHINTERCREDITNUMBER" minOccurs="0"/>
+				<xs:element ref="SEARCHCOMPANYNAME" minOccurs="0"/>
+				<xs:element ref="SEARCHCITY" minOccurs="0"/>
+				<xs:element ref="SEARCHZIPCODE" minOccurs="0"/>
+				<xs:element ref="SEARCHSTREET" minOccurs="0"/>
+				<xs:element ref="SEARCHHOUSENUMBER" minOccurs="0"/>
+				<xs:element ref="SEARCHCOUNTRYISOCODE" minOccurs="0"/>
+				<xs:element ref="SEARCHTELEPHONEAREACODE" minOccurs="0"/>
+				<xs:element ref="SEARCHTELEPHONENUMBER" minOccurs="0"/>
+				<xs:element ref="SEARCHNATIONALNUMBER" minOccurs="0"/>
+				<xs:element ref="SEARCHREGISTRATIONCOUNTRY" minOccurs="0"/>
+				<xs:element ref="SEARCHREGISTRATIONUMBER" minOccurs="0"/>
+				<xs:element ref="SEARCHQUICKID" minOccurs="0"/>
+				<xs:element ref="SEARCHADDITIONALINFORMATION" minOccurs="0"/>
+				<xs:element ref="SEARCHADDITIONALINFORMATIONTYPE" minOccurs="0"/>
+				<xs:element ref="SEARCHMAXRESULTS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SEARCHRESULT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INTERCREDITNUMBER"/>
+				<xs:element ref="NATIONALNUMBER"/>
+				<xs:element ref="COMPANYNAME"/>
+				<xs:element ref="REGISTRATIONCOUNTRY"/>
+				<xs:element ref="SORTNAME"/>
+				<xs:element ref="ZIPCODE"/>
+				<xs:element ref="CITY"/>
+				<xs:element ref="ADDRESSTEXT"/>
+				<xs:element ref="VALIDITYDATE"/>
+				<xs:element ref="AVAILABLEPRODUCTS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SEARCHINTERCREDITNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHCOMPANYNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHCITY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHZIPCODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHSTREET">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHHOUSENUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHCOUNTRYISOCODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHTELEPHONEAREACODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHTELEPHONENUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHNATIONALNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHREGISTRATIONCOUNTRY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHREGISTRATIONUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHQUICKID">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHADDITIONALINFORMATION">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHADDITIONALINFORMATIONTYPE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHMAXRESULTS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYSORTNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ADDRESSTEXT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SEARCHRESULTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SEARCHRESULT" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AVAILABLEPRODUCTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PRODUCT" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PRODUCT">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PRIMARYNATIONALIDENTIFIER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="VALUE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PRODUCTNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ORDERNEWRESEARCH">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="TEXTCODE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+			<xs:attribute name="EXACTVALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INTERNATIONAL">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CREDITSCORING">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCORING_MESSAGEBEGIN"/>
+				<xs:element ref="SCORING_REFERENCE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SCORING_NAMEANDADDRESS"/>
+				<xs:element ref="SCORING_ADDITIONALBUYERINFORMATION"/>
+				<xs:element ref="SCORING_FINANCIALADDEDINFORMATION"/>
+				<xs:element ref="SCORING_QUALITYNOTE"/>
+				<xs:element ref="SCORING_RISKSURFACE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCORING_MESSAGEBEGIN">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCORING_DOCUMENTNAME"/>
+				<xs:element ref="SCORING_DOCUMENTDATETIME"/>
+				<xs:element ref="SCORING_DOCUMENTNUMBER"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCORING_REFERENCE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCORING_REFERENCEQUALIFIER"/>
+				<xs:element ref="SCORING_REFERENCENUMBER"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCORING_NAMEANDADDRESS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCORING_PARTYQUALIFIER"/>
+				<xs:element ref="SCORING_PARTYNAME"/>
+				<xs:element ref="SCORING_STREET"/>
+				<xs:element ref="SCORING_CITY"/>
+				<xs:element ref="SCORING_ZIPCODE"/>
+				<xs:element ref="SCORING_COUNTRY"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCORING_ADDITIONALBUYERINFORMATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCORING_ACTIVITYCODE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCORING_FINANCIALADDEDINFORMATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCORING_CURRENCY"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCORING_QUALITYNOTE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCORING_CREATIONDATE"/>
+				<xs:element ref="SCORING_ECONOMICRESULT"/>
+				<xs:element ref="SCORING_PAYMENTEXPERIENCE"/>
+				<xs:element ref="SCORING_ALARM"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCORING_RISKSURFACE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCORING_SUMMARYYEAR"/>
+				<xs:element ref="SCORING_NOMINALCAPITAL"/>
+				<xs:element ref="SCORING_TURNOVER"/>
+				<xs:element ref="SCORING_WORKFORCE"/>
+				<xs:element ref="SCORING_LEGALFORM"/>
+				<xs:element ref="SCORING_TOTALASSETS"/>
+				<xs:element ref="SCORING_WORKINGCAPITAL"/>
+				<xs:element ref="SCORING_NETWORTHS"/>
+				<xs:element ref="SCORING_STOCKS"/>
+				<xs:element ref="SCORING_ISSUEDCAPITAL"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCORING_DOCUMENTNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_DOCUMENTDATETIME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_DOCUMENTNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_REFERENCEQUALIFIER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_REFERENCENUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_PARTYQUALIFIER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_PARTYNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_STREET">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_CITY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_ZIPCODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_COUNTRY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_ACTIVITYCODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_CURRENCY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_CREATIONDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_ECONOMICRESULT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_PAYMENTEXPERIENCE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_ALARM">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_SUMMARYYEAR">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_NOMINALCAPITAL">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_TURNOVER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_WORKFORCE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_LEGALFORM">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_TOTALASSETS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_WORKINGCAPITAL">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_NETWORTHS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_STOCKS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SCORING_ISSUEDCAPITAL">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="KEYDATA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="KEYDATAINDICATORS" minOccurs="0"/>
+				<xs:element ref="KEYDATARATIOS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="KEYDATAINDICATORS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="KEYDATARATIOS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RATIO" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RATIO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="DESCRIPTION"/>
+				<xs:element ref="DATE"/>
+				<xs:element ref="FROMDATE" minOccurs="0"/>
+				<xs:element ref="TODATE" minOccurs="0"/>
+				<xs:element ref="FROMAMOUNT"/>
+				<xs:element ref="CURRENCY"/>
+				<xs:element ref="RESULTVALUE" minOccurs="0"/>
+				<xs:element ref="RESULTTEXT" minOccurs="0"/>
+				<xs:element ref="RESULTDATE" minOccurs="0"/>
+				<xs:element ref="HEALTHYVALUE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HEALTHYVALUE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AMOUNT"/>
+				<xs:element ref="CURRENCY"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RATIOS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RATIO" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RESULTVALUE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="RESULTTEXT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="RESULTDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CALCULATEDKEYDATAINFO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CALCULATEDKEYDATA" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CALCULATEDKEYDATA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="KEYDATAVALUE"/>
+				<xs:element ref="KEYDATACURRENCY"/>
+				<xs:element ref="KEYDATAASSESSMENT" minOccurs="0"/>
+				<xs:element ref="KEYDATACOMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="KEYDATAVALUE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="KEYDATACURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="KEYDATAASSESSMENT">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="KEYDATACOMMENT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SECTORSCORE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ACTIVITY"/>
+				<xs:element ref="DATE"/>
+				<xs:element ref="SCORE"/>
+				<xs:element ref="COMPANYCOUNTINSOLVENT" minOccurs="0"/>
+				<xs:element ref="COMPANYCOUNTHIGHRISK" minOccurs="0"/>
+				<xs:element ref="COMPANYCOUNTMEDIUMRISK" minOccurs="0"/>
+				<xs:element ref="COMPANYCOUNTLOWRISK" minOccurs="0"/>
+				<xs:element ref="COMPANYPERCENTINSOLVENT" minOccurs="0"/>
+				<xs:element ref="COMPANYPERCENTHIGHRISK" minOccurs="0"/>
+				<xs:element ref="COMPANYPERCENTMEDIUMRISK" minOccurs="0"/>
+				<xs:element ref="COMPANYPERCENTLOWRISK" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COMPANYCOUNTINSOLVENT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYCOUNTHIGHRISK">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYCOUNTMEDIUMRISK">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYCOUNTLOWRISK">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYPERCENTINSOLVENT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYPERCENTHIGHRISK">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYPERCENTMEDIUMRISK">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYPERCENTLOWRISK">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SHARECAPITAL">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NOMINALCAPITAL_AMOUNT"/>
+				<xs:element ref="NOMINALCAPITAL_CURRENCY"/>
+				<xs:element ref="NOMINALCAPITAL_DATE"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES1_NUMBER"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES1_CLASS"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES1_VALUEPERSHARE_CURRENCY"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES1_VALUEPERSHARE_AMOUNT"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES2_NUMBER"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES2_CLASS"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES2_VALUEPERSHARE_CURRENCY"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES2_VALUEPERSHARE_AMOUNT"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES3_NUMBER"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES3_CLASS"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES3_VALUEPERSHARE_CURRENCY"/>
+				<xs:element ref="NOMINALCAPITAL_SHARES3_VALUEPERSHARE_AMOUNT"/>
+				<xs:element ref="NOMINALCAPITAL_PREVIOUS1_CURRENCY"/>
+				<xs:element ref="NOMINALCAPITAL_PREVIOUS1_AMOUNT"/>
+				<xs:element ref="NOMINALCAPITAL_PREVIOUS1_DATE"/>
+				<xs:element ref="NOMINALCAPITAL_PREVIOUS2_CURRENCY"/>
+				<xs:element ref="NOMINALCAPITAL_PREVIOUS2_AMOUNT"/>
+				<xs:element ref="NOMINALCAPITAL_PREVIOUS2_DATE"/>
+				<xs:element ref="NOMINALCAPITAL_PREVIOUS3_CURRENCY"/>
+				<xs:element ref="NOMINALCAPITAL_PREVIOUS3_AMOUNT"/>
+				<xs:element ref="NOMINALCAPITAL_PREVIOUS3_DATE"/>
+				<xs:element ref="ISSUEDCAPITAL_AMOUNT"/>
+				<xs:element ref="ISSUEDCAPITAL_CURRENCY"/>
+				<xs:element ref="ISSUEDCAPITAL_DATE"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES1_NUMBER"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES1_CLASS"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES1_VALUEPERSHARE_CURRENCY"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES1_VALUEPERSHARE_AMOUNT"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES2_NUMBER"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES2_CLASS"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES2_VALUEPERSHARE_CURRENCY"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES2_VALUEPERSHARE_AMOUNT"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES3_NUMBER"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES3_CLASS"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES3_VALUEPERSHARE_CURRENCY"/>
+				<xs:element ref="ISSUEDCAPITAL_SHARES3_VALUEPERSHARE_AMOUNT"/>
+				<xs:element ref="ISSUEDCAPITAL_PREVIOUS1_CURRENCY"/>
+				<xs:element ref="ISSUEDCAPITAL_PREVIOUS1_AMOUNT"/>
+				<xs:element ref="ISSUEDCAPITAL_PREVIOUS1_DATE"/>
+				<xs:element ref="ISSUEDCAPITAL_PREVIOUS2_CURRENCY"/>
+				<xs:element ref="ISSUEDCAPITAL_PREVIOUS2_AMOUNT"/>
+				<xs:element ref="ISSUEDCAPITAL_PREVIOUS2_DATE"/>
+				<xs:element ref="ISSUEDCAPITAL_PREVIOUS3_CURRENCY"/>
+				<xs:element ref="ISSUEDCAPITAL_PREVIOUS3_AMOUNT"/>
+				<xs:element ref="ISSUEDCAPITAL_PREVIOUS3_DATE"/>
+				<xs:element ref="PAIDUPCAPITAL_CURRENCY"/>
+				<xs:element ref="PAIDUPCAPITAL_AMOUNT"/>
+				<xs:element ref="PAIDUPCAPITAL_DATE"/>
+				<xs:element ref="PAIDUPCAPITAL_CASH_CURRENCY"/>
+				<xs:element ref="PAIDUPCAPITAL_CASH_AMOUNT"/>
+				<xs:element ref="PAIDUPCAPITAL_NONCASH_CURRENCY"/>
+				<xs:element ref="PAIDUPCAPITAL_NONCASH_AMOUNT"/>
+				<xs:element ref="PAIDUPCAPITAL_PREVIOUS1_CURRENCY"/>
+				<xs:element ref="PAIDUPCAPITAL_PREVIOUS1_AMOUNT"/>
+				<xs:element ref="PAIDUPCAPITAL_PREVIOUS1_DATE"/>
+				<xs:element ref="PAIDUPCAPITAL_PREVIOUS2_CURRENCY"/>
+				<xs:element ref="PAIDUPCAPITAL_PREVIOUS2_AMOUNT"/>
+				<xs:element ref="PAIDUPCAPITAL_PREVIOUS2_DATE"/>
+				<xs:element ref="PAIDUPCAPITAL_PREVIOUS3_CURRENCY"/>
+				<xs:element ref="PAIDUPCAPITAL_PREVIOUS3_AMOUNT"/>
+				<xs:element ref="PAIDUPCAPITAL_PREVIOUS3_DATE"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES1_NUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES1_CLASS">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES1_VALUEPERSHARE_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES1_VALUEPERSHARE_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES2_NUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES2_CLASS">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES2_VALUEPERSHARE_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES2_VALUEPERSHARE_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES3_NUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES3_CLASS">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES3_VALUEPERSHARE_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_SHARES3_VALUEPERSHARE_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_PREVIOUS1_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_PREVIOUS1_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_PREVIOUS1_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_PREVIOUS2_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_PREVIOUS2_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_PREVIOUS2_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_PREVIOUS3_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_PREVIOUS3_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOMINALCAPITAL_PREVIOUS3_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES1_NUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES1_CLASS">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES1_VALUEPERSHARE_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES1_VALUEPERSHARE_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES2_NUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES2_CLASS">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES2_VALUEPERSHARE_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES2_VALUEPERSHARE_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES3_NUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES3_CLASS">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES3_VALUEPERSHARE_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_SHARES3_VALUEPERSHARE_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_PREVIOUS1_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_PREVIOUS1_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_PREVIOUS1_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_PREVIOUS2_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_PREVIOUS2_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_PREVIOUS2_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_PREVIOUS3_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_PREVIOUS3_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ISSUEDCAPITAL_PREVIOUS3_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_CASH_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_CASH_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_NONCASH_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_NONCASH_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_PREVIOUS1_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_PREVIOUS1_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_PREVIOUS1_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_PREVIOUS2_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_PREVIOUS2_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_PREVIOUS2_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_PREVIOUS3_CURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_PREVIOUS3_AMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAIDUPCAPITAL_PREVIOUS3_DATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="MOTORVEHICLES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MOTORVEHICLE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MOTORVEHICLE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="DATE"/>
+				<xs:element ref="OWNERSHIP"/>
+				<xs:element ref="AMOUNT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OWNERSHIP">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DEBTCOLLECTION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CASE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CASE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INVOICEDATE"/>
+				<xs:element ref="AMOUNT"/>
+				<xs:element ref="CURRENCY"/>
+				<xs:element ref="CASESTATUS"/>
+				<xs:element ref="CASECLOSEREASON"/>
+				<xs:element ref="RECEIVEDDATE"/>
+				<xs:element ref="CREDITOR" minOccurs="0"/>
+				<xs:element ref="INFORMATIONSOURCE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INVOICEDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CASESTATUS">
+		<xs:complexType mixed="true">
+			<xs:attribute name="DATE"/>
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CASECLOSEREASON">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RECEIVEDDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CREDITOR">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="INFORMATIONSOURCE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="AUDITS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AUDIT" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AUDIT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DATE"/>
+				<xs:element ref="AUDITORPERSONNAME"/>
+				<xs:element ref="AUDITORCOMPANYNAME"/>
+				<xs:element ref="AUDITORCOMPANYADDRESS"/>
+				<xs:element ref="AUDITSTATUS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AUDITORPERSONNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="AUDITORCOMPANYNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="AUDITORCOMPANYADDRESS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="AUDITSTATUS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="STATUSLIST">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COMPANYSTATUS" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COMPANYSTATUS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="STATUS"/>
+				<xs:element ref="VALIDSINCE"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VALIDSINCE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYHISTORY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FORMERCOMPANYNAME" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="FORMERADDRESS" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="FORMERREGISTRATION" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="FORMERLEGALFORM" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FORMERCOMPANYNAME">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NAME"/>
+				<xs:element ref="VALIDSINCE"/>
+				<xs:element ref="VALIDUNTIL"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FORMERADDRESS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="VALIDSINCE"/>
+				<xs:element ref="VALIDUNTIL"/>
+				<xs:element ref="ADDRESSTYPE"/>
+				<xs:element ref="RUNNINGNUMBER"/>
+				<xs:element ref="NAME" minOccurs="0"/>
+				<xs:element ref="STREET"/>
+				<xs:element ref="HOUSENUMBER"/>
+				<xs:element ref="ADDITIONALADDRESSLINE" minOccurs="0"/>
+				<xs:element ref="ZIPCODE"/>
+				<xs:element ref="CITY"/>
+				<xs:element ref="COUNTRY"/>
+				<xs:element ref="COUNTRYREGION" minOccurs="0"/>
+				<xs:element ref="COUNTY" minOccurs="0"/>
+				<xs:element ref="COMMUNITY" minOccurs="0"/>
+				<xs:element ref="POST" minOccurs="0"/>
+				<xs:element ref="TELEPHONE" maxOccurs="unbounded"/>
+				<xs:element ref="FAX" maxOccurs="unbounded"/>
+				<xs:element ref="EMAIL"/>
+				<xs:element ref="INTERNET"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FORMERREGISTRATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NUMBER"/>
+				<xs:element ref="DATE"/>
+				<xs:element ref="PROTOCOLPLACE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FORMERLEGALFORM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LEGALFORM"/>
+				<xs:element ref="VALIDSINCE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VALIDUNTIL">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PROTOCOLPLACE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="MAJORSUPPLIERS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MAJORSUPPLIER" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MAJORCUSTOMERS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MAJORCUSTOMER" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MAJORSUPPLIER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NAME"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MAJORCUSTOMER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NAME"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BRANCHRATIOS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RATIO" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="NACE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FROMDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="TODATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ADDITIONALINSOLVENCYLIST">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ADDITIONALINSOLVENCY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADDITIONALINSOLVENCY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TEXT"/>
+				<xs:element ref="INFORMATIONDATE"/>
+				<xs:element ref="COURTDECISIONDATE"/>
+				<xs:element ref="COURTPUBLISHDATE"/>
+				<xs:element ref="COURTNUMBER"/>
+				<xs:element ref="COURTNAME"/>
+				<xs:element ref="COURTADDRESS"/>
+				<xs:element ref="PUBLICNAME"/>
+				<xs:element ref="NUMBERPUBLIC"/>
+				<xs:element ref="PUBLICTEXT"/>
+				<xs:element ref="DEADLINE"/>
+				<xs:element ref="TRUSTEENAME"/>
+				<xs:element ref="TRUSTEEADDRESS"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INFORMATIONDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COURTDECISIONDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COURTPUBLISHDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COURTNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COURTNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COURTADDRESS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PUBLICNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NUMBERPUBLIC">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PUBLICTEXT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DEADLINE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="TRUSTEENAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="TRUSTEEADDRESS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="FINANCIALS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOTIFICATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COMPANY" minOccurs="0"/>
+				<xs:element ref="CHANGES"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CHANGES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CHANGE" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CHANGE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="TYPEADDITIONALINFO" minOccurs="0"/>
+				<xs:element ref="CHANGEREASON" minOccurs="0"/>
+				<xs:sequence minOccurs="0" maxOccurs="unbounded">
+					<xs:element ref="CURRENTDATA" minOccurs="0"/>
+					<xs:element ref="PREVIOUSDATA" minOccurs="0"/>
+					<xs:element ref="DELETEDDATA" minOccurs="0"/>
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CURRENTDATA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ASSESSMENT" minOccurs="0"/>
+				<xs:element ref="CCEATRATING" minOccurs="0"/>
+				<xs:element ref="INSOLVENCY" minOccurs="0"/>
+				<xs:element ref="ADDITIONALINSOLVENCYLIST" minOccurs="0"/>
+				<xs:element ref="PAYMENTS" minOccurs="0"/>
+				<xs:element ref="LEGALFORM" minOccurs="0"/>
+				<xs:element ref="COMPANYNAME" minOccurs="0"/>
+				<xs:element ref="ACTIVITY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ADDRESS" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="MANAGER" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SHAREHOLDER" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CASE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LINKEDCOMPANY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="INDICATOR" minOccurs="0"/>
+				<xs:element ref="BALANCESHEET" minOccurs="0"/>
+				<xs:element ref="BANKCONNECTION" minOccurs="0"/>
+				<xs:element ref="BANKCONFIRMATION" minOccurs="0"/>
+				<xs:element ref="COMPANYSTATUS" minOccurs="0"/>
+				<xs:element ref="CUSTOMERSPECIFICMAXCREDIT" minOccurs="0"/>
+				<xs:element ref="CALCULATEDKEYDATA" minOccurs="0"/>
+				<xs:element ref="SHARECAPITAL" minOccurs="0"/>
+				<xs:element ref="ADDITIONALINFORMATIONITEM" minOccurs="0"/>
+				<xs:element ref="DCLINSURANCE" minOccurs="0"/>
+				<xs:element ref="PAYMENTINDEX" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PREVIOUSDATA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ASSESSMENT" minOccurs="0"/>
+				<xs:element ref="CCEATRATING" minOccurs="0"/>
+				<xs:element ref="INSOLVENCY" minOccurs="0"/>
+				<xs:element ref="PAYMENTS" minOccurs="0"/>
+				<xs:element ref="LEGALFORM" minOccurs="0"/>
+				<xs:element ref="COMPANYNAME" minOccurs="0"/>
+				<xs:element ref="ACTIVITY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ADDRESS" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="MANAGER" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SHAREHOLDER" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CASE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LINKEDCOMPANY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="INDICATOR" minOccurs="0"/>
+				<xs:element ref="BANKCONNECTION" minOccurs="0"/>
+				<xs:element ref="COMPANYSTATUS" minOccurs="0"/>
+				<xs:element ref="CUSTOMERSPECIFICMAXCREDIT" minOccurs="0"/>
+				<xs:element ref="CALCULATEDKEYDATA" minOccurs="0"/>
+				<xs:element ref="SHARECAPITAL" minOccurs="0"/>
+				<xs:element ref="ADDITIONALINFORMATIONITEM" minOccurs="0"/>
+				<xs:element ref="DCLINSURANCE" minOccurs="0"/>
+				<xs:element ref="PAYMENTINDEX" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TYPEADDITIONALINFO">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DELETEDDATA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ADDRESS" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CASE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="BANKCONNECTION" minOccurs="0"/>
+				<xs:element ref="BANKCONFIRMATION" minOccurs="0"/>
+				<xs:element ref="ADDITIONALINFORMATIONITEM" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCORINGELEMENTS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CHANGEREASON">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UNRATEDREASON">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CCEATRATING">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCORE"/>
+				<xs:element ref="TREND" minOccurs="0"/>
+				<xs:element ref="DATE"/>
+				<xs:element ref="PD" minOccurs="0"/>
+				<xs:element ref="SOFTPD" minOccurs="0"/>
+				<xs:element ref="FINPD" minOccurs="0"/>
+				<xs:element ref="THREEDIGITSCORE" minOccurs="0"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+				<xs:element ref="UNRATEDREASON" minOccurs="0"/>
+				<xs:element ref="CONTRIBUTION" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CONTRIBUTION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FACTOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FACTOR">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NAME"/>
+				<xs:element ref="DIRECTION"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DIRECTION">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PD">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="SOFTPD">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="FINPD">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="HISTORICALCCEATRATINGS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="HISTORICALCCEATRATING" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HISTORICALCCEATRATING">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCORE"/>
+				<xs:element ref="SECTORSCORE" minOccurs="0"/>
+				<xs:element ref="DATE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SCORE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RATINGTEXTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RATINGTEXTCOMPANYSIZE" minOccurs="0"/>
+				<xs:element ref="RATINGTEXTTURNOVER" minOccurs="0"/>
+				<xs:element ref="RATINGTEXTFIXEDASSETS" minOccurs="0"/>
+				<xs:element ref="RATINGTEXTWORKINGCAPITAL" minOccurs="0"/>
+				<xs:element ref="RATINGTEXTCASHFLOW" minOccurs="0"/>
+				<xs:element ref="RATINGTEXTEQUITYRATIO" minOccurs="0"/>
+				<xs:element ref="RATINGTEXTLASTLEGALPROCEEDINGS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RATINGTEXTCOMPANYSIZE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="RATINGTEXTTURNOVER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="RATINGTEXTFIXEDASSETS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="RATINGTEXTWORKINGCAPITAL">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="RATINGTEXTCASHFLOW">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="RATINGTEXTEQUITYRATIO">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="RATINGTEXTLASTLEGALPROCEEDINGS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="TREND">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EUROGATERISKCLASS">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COMPANYFINANCIALS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COMPANY"/>
+				<xs:element ref="BALANCESHEET"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RELATEDCOMPANIESFINANCIALS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RELATEDCOMPANYFINANCIALS" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RELATEDCOMPANYFINANCIALS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="INTERCREDITNUMBER"/>
+				<xs:element ref="COMPANYNAME"/>
+				<xs:element ref="BALANCESHEET"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTREFERENCES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PAYMENTREFERENCE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTREFERENCE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DATE" minOccurs="0"/>
+				<xs:element ref="SOURCENAME" minOccurs="0"/>
+				<xs:element ref="KNOWNSINCE" minOccurs="0"/>
+				<xs:element ref="PAYMENTTERMSTEXT" minOccurs="0"/>
+				<xs:element ref="PAYMENTCONDITIONS" minOccurs="0"/>
+				<xs:element ref="PAYMENTEXPERIENCE" minOccurs="0"/>
+				<xs:element ref="PAYMENTREFERENCEMAXIMUMCREDIT" minOccurs="0"/>
+				<xs:element ref="NOTES" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SOURCENAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="KNOWNSINCE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAYMENTTERMSTEXT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAYMENTCONDITIONS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAYMENTEXPERIENCE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTREFERENCEMAXIMUMCREDIT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NOTES">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DAYSPAYABLEOUTSTANDING">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DAYSFROM"/>
+				<xs:element ref="DAYSTO"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DAYSFROM">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DAYSTO">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="LITIGATIONS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LITIGATION" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LITIGATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CLAIMAMOUNT"/>
+				<xs:element ref="CLAIMAMOUNTCURRENCY" minOccurs="0"/>
+				<xs:element ref="DATEOFWRIT"/>
+				<xs:element ref="ACTIONNUMBER" minOccurs="0"/>
+				<xs:element ref="CASEID" minOccurs="0"/>
+				<xs:element ref="DEFENDANT" minOccurs="0"/>
+				<xs:element ref="PLAINTIFF" minOccurs="0"/>
+				<xs:element ref="CAUSE"/>
+				<xs:element ref="DETAILS" minOccurs="0"/>
+				<xs:element ref="COMPANYISPLAINTIFF" minOccurs="0"/>
+				<xs:element ref="NUMBEROFPARTICIPANTS" minOccurs="0"/>
+				<xs:element ref="STATUS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CLAIMAMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CLAIMAMOUNTCURRENCY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DATEOFWRIT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ACTIONNUMBER">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CASEID">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DEFENDANT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PLAINTIFF">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CAUSE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DETAILS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="COMPANYISPLAINTIFF">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NUMBEROFPARTICIPANTS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="LITIGATIONSUMMARYS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LITIGATIONSUMMARY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LITIGATIONSUMMARY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COMPANYISPLAINTIFF" minOccurs="0"/>
+				<xs:element ref="PERIOD" minOccurs="0"/>
+				<xs:element ref="NUMBER" minOccurs="0"/>
+				<xs:element ref="CURRENCYAMOUNT" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CURRENCYAMOUNT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AMOUNT"/>
+				<xs:element ref="CURRENCY"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PERIOD">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NATUREOFBUSINESS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NODE_NATUREOFBUSINESS" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NODE_NATUREOFBUSINESS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CHARGES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CHARGE_SUMMARY_TYPE"/>
+				<xs:element ref="CHARGE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CHARGE_SUMMARY_TYPE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CHARGE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DATE"/>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="DESCRIPTION"/>
+				<xs:element ref="AMOUNT"/>
+				<xs:element ref="AMOUNTTYPE"/>
+				<xs:element ref="AMOUNTTEXT"/>
+				<xs:element ref="CHARGECURRENCY"/>
+				<xs:element ref="CHARGEINFAVOROF"/>
+				<xs:element ref="CHARGEAGAINST"/>
+				<xs:element ref="DISCHARGEDATE"/>
+				<xs:element ref="DISCHARGETYPE"/>
+				<xs:element ref="DISCHARGETEXT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AMOUNTTYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AMOUNTTEXT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CHARGECURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CHARGEINFAVOROF">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CHARGEAGAINST">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DISCHARGEDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DISCHARGETYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DISCHARGETEXT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="CREDITREQUESTED">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AMOUNT" minOccurs="0"/>
+				<xs:element ref="CURRENCY" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PROFITABILITY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY" minOccurs="0"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="STATUSOFCOMPANY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY" minOccurs="0"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FINANCIALSITUATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOLVENCY" minOccurs="0"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CONTACTINFORMATIONS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CONTACTINFORMATION" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CONTACTINFORMATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="INTERNATIONALCODE"/>
+				<xs:element ref="AREACODE"/>
+				<xs:element ref="NUMBER"/>
+				<xs:element ref="EMAIL"/>
+				<xs:element ref="DESCRIPTIONTYPE"/>
+				<xs:element ref="DESCRIPTION"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INTERNATIONALCODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="AREACODE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="DESCRIPTIONTYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EXECUTIONS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="EXECUTION" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EXECUTION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="EXECUTIONDATE" minOccurs="0"/>
+				<xs:element ref="EXECUTIONAMOUNT" minOccurs="0"/>
+				<xs:element ref="EXECUTIONCURRENCY" minOccurs="0"/>
+				<xs:element ref="EXECUTORNAME" minOccurs="0"/>
+				<xs:element ref="EXECUTIONSTATUS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EXECUTIONDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EXECUTIONAMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EXECUTIONCURRENCY">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EXECUTORNAME">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="EXECUTIONSTATUS">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FINANCIALSOURCES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FINANCIALSOURCE" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FINANCIALSOURCE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SOURCETYPE"/>
+				<xs:element ref="DATE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SOURCETYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BANKCONFIRMATIONS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BANKCONFIRMATION" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BANKCONFIRMATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CONFIRMATIONCURRENT" minOccurs="0"/>
+				<xs:element ref="CONFIRMATIONHISTORY" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CONFIRMATIONCURRENT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CONFIRMATION" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CONFIRMATIONHISTORY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CONFIRMATION" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CONFIRMATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BANK"/>
+				<xs:element ref="ACCOUNTNUMBER"/>
+				<xs:element ref="BANKCONFIRMATIONDATE"/>
+				<xs:element ref="BANKACCOUNTBALANCE"/>
+				<xs:element ref="BANKACCOUNTBALANCECURRENCY"/>
+				<xs:element ref="TOTALACCESSIONINLAST30DAYS"/>
+				<xs:element ref="TOTALACCESSIONINLAST30DAYSCURRENCY"/>
+				<xs:element ref="AVERAGEBALANCEINLAST30DAYS"/>
+				<xs:element ref="AVERAGEBALANCEINLAST30DAYSCURRENCY"/>
+				<xs:element ref="AMOUNTOFAPPROVEDCREDIT"/>
+				<xs:element ref="AMOUNTOFAPPROVEDCREDITCURRENCY"/>
+				<xs:element ref="ACCOUNTPERMANENTLYBLOCKEDFROMDAYOFISSUINGTHISREPORT"/>
+				<xs:element ref="ACCOUNTTEMPORARILYBLOCKED"/>
+				<xs:element ref="NUMBEROFDAYSACCOUNTBLOCKEDINLAST180DAYS"/>
+				<xs:element ref="BLOCKEDAMOUNT"/>
+				<xs:element ref="BLOCKEDAMOUNTCURRENCY"/>
+				<xs:element ref="ACCOUNTCLOSUREDATE"/>
+				<xs:element ref="COMMENT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BANKCONFIRMATIONDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="BANKACCOUNTBALANCE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="BANKACCOUNTBALANCECURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TOTALACCESSIONINLAST30DAYS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="TOTALACCESSIONINLAST30DAYSCURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AVERAGEBALANCEINLAST30DAYS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="AVERAGEBALANCEINLAST30DAYSCURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AMOUNTOFAPPROVEDCREDIT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="AMOUNTOFAPPROVEDCREDITCURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ACCOUNTPERMANENTLYBLOCKEDFROMDAYOFISSUINGTHISREPORT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="ACCOUNTTEMPORARILYBLOCKED">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="NUMBEROFDAYSACCOUNTBLOCKEDINLAST180DAYS">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="BLOCKEDAMOUNT">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="BLOCKEDAMOUNTCURRENCY">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ACCOUNTCLOSUREDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="AUTHORITY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AUTHORITYTYPE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AUTHORITYTYPE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NEGATIVEINFORMATION">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COUNTRYINDICATORS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COUNTRYINDICATOR" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COUNTRYINDICATOR">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="DATE"/>
+				<xs:element ref="COUNTRY" minOccurs="0"/>
+				<xs:element ref="NACEGROUP" minOccurs="0"/>
+				<xs:element ref="INDICATORVALUE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NACEGROUP">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INDICATORVALUE">
+		<xs:complexType mixed="true">
+			<xs:attribute name="CODE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADDITIONALBALANCESHEETS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ADDITIONALBALANCESHEET" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADDITIONALBALANCESHEET">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BALANCESHEETITEM" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="COMMENT" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="TYPE"/>
+			<xs:attribute name="NAME"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADDITIONALTEXTINFORMATIONS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ADDITIONALTEXTINFORMATIONITEM" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADDITIONALTEXTINFORMATIONITEM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="TEXT"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EXTERNALDEBTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="EXTERNALDEBT" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EXTERNALDEBT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="FROMDATE"/>
+				<xs:element ref="TODATE"/>
+				<xs:element ref="AMOUNT"/>
+				<xs:element ref="CURRENCY"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GENERALPAYMENTTERMS1">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GENERALPAYMENTTERMS2">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GENERALPAYMENTTERMS3">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GENERALPAYMENTTERMS4">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GENERALPAYMENTTERMS5">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GENERALPAYMENTDAYS1">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GENERALPAYMENTDAYS2">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GENERALPAYMENTDAYS3">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GENERALPAYMENTDAYS4">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GENERALPAYMENTDAYS5">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTTERMS1">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTDAYS1">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTTERMSTEXT1">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TERMSQUALIFIER1">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTTERMS2">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTDAYS2">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTTERMSTEXT2">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TERMSQUALIFIER2">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTTERMS3">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTDAYS3">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTTERMSTEXT3">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TERMSQUALIFIER3">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTTERMS4">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTDAYS4">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTTERMSTEXT4">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TERMSQUALIFIER4">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTTERMS5">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTDAYS5">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTTERMSTEXT5">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TERMSQUALIFIER5">
+		<xs:complexType mixed="true">
+			<xs:attribute name="VALUE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RETAIL">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="PAYMENTMORALITYINDEX">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PMI"/>
+				<xs:element ref="DESCRIPTION"/>
+				<xs:element ref="DATE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTMORALITYINDEXHISTORY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PAYMENTMORALITYINDEXHISTORYITEM" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAYMENTMORALITYINDEXHISTORYITEM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PMI"/>
+				<xs:element ref="DESCRIPTION"/>
+				<xs:element ref="DATE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PMI">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="BALANCESHEETPUBLICATIONS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BALANCESHEETPUBLICATION" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BALANCESHEETPUBLICATION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BALANCESHEETFROMDATE" minOccurs="0"/>
+				<xs:element ref="BALANCESHEETTODATE"/>
+				<xs:element ref="FILEDONDATE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BALANCESHEETFROMDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="BALANCESHEETTODATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="FILEDONDATE">
+		<xs:complexType mixed="true"/>
+	</xs:element>
+	<xs:element name="FAMILYTREE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NODE"/>
+				<xs:element ref="PARENTS" minOccurs="0"/>
+				<xs:element ref="CHILDREN" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CHILDREN">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CHILD" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CHILD">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="NODE"/>
+				<xs:element ref="CHILDREN" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="TYPE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PARENTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PARENT" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PARENT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TYPE"/>
+				<xs:element ref="NODE"/>
+				<xs:element ref="CHILDREN" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="TYPE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NODE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NAME"/>
+				<xs:element ref="COUNTRY" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="LEVEL"/>
+			<xs:attribute name="SHARES"/>
+			<xs:attribute name="TYPE"/>
+			<xs:attribute name="NATIONALID"/>
+			<xs:attribute name="VATNUMBER"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
