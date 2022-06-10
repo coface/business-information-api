@@ -108,7 +108,7 @@
 							<hr>
 							<p>Our API uses an OAuth2 protocol. You will need to request a token available 1H, before calling our API. (See <a href="#processAuthentication">Authentication process</a>)</p>
 						</div>
-						<div id="process" class="mt-5">
+						<div id="process" class="mt-5 text-justify">
 							<h2>Process</h2>
 							<hr>
 							<div id="processAuthentication" class="mt-4">
@@ -118,7 +118,7 @@
 								<p>Be aware that this token is valid only 1h.</p>
 								<p>Technical documentation can be found on <a target="_blank" href="https://devportal.coface.com/apis/ytinqd4ghc">dev portal</a>.</p>
 							</div>
-							<div id="processSearch" class="mt-4">
+							<div id="processSearch" class="mt-4 text-justify">
 								<h4>Company search</h4>
 								<p>To order monitoring or report, you need to find on which company you want the data.</p>
 								<p>To identify a company, you have two possibilities : use the Coface Id of the company or use an unique id from a national referential.</p>
@@ -137,13 +137,18 @@
 							</div>
 							<div id="processOrderReport" class="mt-4">
 								<h4>Ordering a report</h4>
+								<ul class="text-justify">
+									<li>Coface will try its best to answer you quickly. But in some countries, it can't be possible and Coface will need time to make an investigation. When you order you report, you will have the possibility to specify if you want immediate result or not. If we can't provide you data, you will of course not be charged.</li>
+									<li>You have to possibility to request a report even if you don't find the company in our database. A Coface agent will do an investigation and create a report if he find the company or cancel the order if not. In this case, you will not be charged.</li>
+									<li>The time to process an order varies by country and provider. For immediate order, it takes maximum few seconds</li>
+								</ul>
 								<nav class="nav nav-tabs">
 									<a class="nav-item nav-link active" href="#processOrderReportFunt" data-toggle="tab">Functional view</a>
 									<a class="nav-item nav-link" href="#processOrderReportTech" data-toggle="tab">Technical view</a>
 								</nav>
 								<div class="tab-content">
 									<div class="tab-pane active" id="processOrderReportFunt">
-										<img src="https://raw.githubusercontent.com/coface/business-information-api/master/report-api/documentation/process/orderReportProcessFunct.png" alt="Ordering a report" class="img-fluid" style="max-width:800px" />
+										<img src="https://raw.githubusercontent.com/coface/business-information-api/master/report-api/documentation/process/orderReportProcessFunct.png" alt="Ordering a report" class="img-fluid" style="min-width:1000px" />
 									</div>
 									<div class="tab-pane" id="processOrderReportTech">
 										In progress
@@ -158,7 +163,7 @@
 								</nav>
 								<div class="tab-content">
 								  <div class="tab-pane active" id="processMonitoringFunt">
-									<img src="https://raw.githubusercontent.com/coface/business-information-api/master/report-api/documentation/process/orderMonitoringProcessFunct.png" alt="Company search process" class="img-fluid" style="max-width:800px" />
+									<img src="https://raw.githubusercontent.com/coface/business-information-api/master/report-api/documentation/process/orderMonitoringProcessFunct.png" alt="Company search process" class="img-fluid" style="min-width:1100px" />
 								  </div>
 								  <div class="tab-pane" id="processMonitoringTech">
 									In progress
