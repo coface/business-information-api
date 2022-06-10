@@ -66,15 +66,10 @@
 							<a href="#processOrderReport" class="nav-link align-middle"><span class="pl-4">Ordering report</span></a>
 							<a href="#processMonitoring" class="nav-link align-middle"><span class="pl-4">Ordering monitoring</span></a>
 							<a href="#processNotification" class="nav-link align-middle"><span class="pl-4">Notification</span></a>
-							<a href="#useCase" class="nav-link align-middle"><span>Use cases</span></a>
 							<a href="#environment" class="nav-link align-middle"><span>Environment</span></a>
 							<a href="#version" class="nav-link align-middle"><span>Version</span></a>
-							<a href="#documentation" class="nav-link align-middle"><span>Documentation</span></a>
-							<a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/faq.html" class="nav-link align-middle"><span class="pl-4">FAQ</span></a>
-							<a href="#swagger" class="nav-link align-middle"><span class="pl-4">Swagger</span></a>
-							<a href="#postman" class="nav-link align-middle"><span class="pl-4">Postman</span></a>
-							<a href="#sample" class="nav-link align-middle"><span class="pl-4">Code samples</span></a>
-							<a href="#principle" class="nav-link align-middle"><span class="pl-4">General principles</span></a>
+							<a href="#documentation" class="nav-link align-middle"><span>Technical documentation</span></a>
+							<a href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/faq.html" class="nav-link align-middle"><span>FAQ</span></a>
 						</div>
 					</div>
 				</div>
@@ -191,36 +186,6 @@
 								</div>
 							</div>
 						</div>
-						<div id="useCase" class="mt-5">
-							<h2>Use cases</h2>
-							<hr>
-							<p>The following simple use cases provide an overview of how API operations can be used in typical scenarios.</p>
-							<h4>Ordering a credit report for a company</h4>
-							<p>Assuming you have the name and address of a company for which you want a report.</p>
-						    <ol>
-								<li>Use the "findCompany" operation to find the company (or "identifyCompany" if you have a unique identifer for the company). This returns a list of matching companies.</li>
-								<li>Using the "company_id" of the selected company, order a report on the company using the "placeOrder" operation. The response contains the id of the order.</li>
-								<li>Wait the completion of the order. The "getOrder" operation is used to check the status of it.</li>
-								<li>When the order is ready, "getOrderDocumentList" will return a list of documents for the order.</li>
-								<li>Retrive the document via "getOrderDocument".</li>
-							</ol>
-							<h4>Monitoring a company</h4>
-							<p>When you monitor a company, you receive notifications each time new data becomes available about the company.</p>
-						    <ol>
-								<li>Use the "findCompany" operation to find the company (or "identifyCompany" if you have a unique identifer for the company). This returns a list of matching companies.</li>
-								<li>Using the "company_id" of the selected company, order a monitoring on the company using the "placeMonitoringOrder" operation. The response contains the id of the order.</li>
-								<li>Wait the completion of the order. The "getOrder" operation is used to check the status of it.</li>
-								<li>When the order is ready, "getOrderDocumentList" will return a list of documents for the order.</li>
-								<li>Retrive the document via "getOrderDocument".</li>
-							</ol>
-
-							<p>Once the monitoring is set, two cases :</p>
-							<ul>
-								<li>You have filled a callback url. If so, wait until you get ping on this url.</li>
-								<li>You didn't fill a callback url. Call on a regular basis "getNotifications".</li>
-							</ul>
-							<p>Once you get the notification id, retrieve the data by using the "getNotificationDocument" to retrieve the report associated with each notification.</p>
-						</div>
 						<div id="environment" class="mt-5">
 							<h2>Environment</h2>
 							<hr>
@@ -274,26 +239,21 @@
 							</table>
 						</div>
 						<div id="documentation" class="mt-5">
-							<h2>Documentation</h2>
+							<h2>Technical documentation</h2>
 							<hr>
-							<div id="faq" class="mt-4">
-								<h4>FAQ</h4>
-								<p>A question ? Check our <a target="_blank" href="https://htmlpreview.github.io/?https://github.com/coface/business-information-api/blob/master/report-api/documentation/faq.html">FAQ</a>.</p>
-							</div>
 							<div id="swagger" class="mt-4">
 								<h4>Swagger</h4>
-								<p>Our swagger is available <a target="_blank" href="https://b2b.cofacecentraleurope.com/web/online/api-docs/index.html?url=https://b2b.cofacecentraleurope.com/api/bi/v1/swagger.yaml">here</a>.</p>
-								<p>If you are planning to retrieve our products in XML or JSON please find below links to our schema.</p>
-								<p>JSON schema <a target="_blank" title="JSON schema" href="https://icon.cofacecentraleurope.com/web/online/downloads/icon.json">download</a>.</p>
-								<p>XML schema <a target="_blank" title="XML schema" href="https://icon.cofacecentraleurope.com/web/online/downloads/ICON.DTD">download</a>.</p>
+								<p>Our swagger is available on our <a target="_blank" href="https://devportal.coface.com/">dev portal</a>.</p>
 							</div>
 							<div id="postman" class="mt-4">
 								<h4>Postman collection</h4>
-								<p>We provide you <a target="_blank" href="https://github.com/coface/business-information-api/tree/master/report-api/postman">several postman collections and environment settings</a>.</p>
-							</div>
-							<div id="sample" class="mt-4">
-								<h4>Code samples</h4>
-								<p><p>Additional information and code samples (C#, Python) demonstrating the use of the API can be found on <a target="_blank" href="https://github.com/coface/business-information-api/tree/master/report-api/v1/sample">the git hub</a>.</p>
+								<p> You can test our API without any developpment using Postman.</p>
+								<p>You have to</p>
+								<ol>
+									<li>Download <a target="_blank" href="https://www.postman.com/">Postman</a>.</li>
+									<li>Download our<a target="_blank" href="https://github.com/coface/business-information-api/tree/master/report-api/postman">postman collections and environment settings</a>.</li>
+									<li>Modify the credentials in the environment settings.</li>
+								</ol>
 							</div>
 							<div id="principle" class="mt-4">
 								<h4>General principles</h4>
